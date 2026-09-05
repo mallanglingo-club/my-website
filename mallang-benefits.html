@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말랑링고 임직원 교육·문화복지 우대 프로그램 제안</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            background-color: #f3f4f6; 
+            /* 한국어 단어 단위 줄바꿈 유지 (어색한 끊어짐 방지) */
+            word-break: keep-all; 
+            overflow-wrap: break-word;
+        }
+        /* 16:9 비율의 슬라이드 컨테이너 */
+        .slide-container {
+            width: 1280px; 
+            height: 720px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            position: relative; 
+            overflow: hidden; 
+            flex-shrink: 0; 
+            margin-bottom: 3rem;
+            display: flex; 
+            flex-direction: column;
+        }
+        .text-mallang-blue { color: #0084FF; }
+        .bg-mallang-blue { background-color: #0084FF; }
+        .text-deep-navy { color: #0B192C; }
+        .bg-deep-navy { background-color: #0B192C; }
+        
+        /* 4번 슬라이드 상장 케이스 스타일 */
+        .certificate-folder {
+            background: linear-gradient(135deg, #0f1c30 0%, #1a2a44 100%);
+            border-left: 20px solid #08101c;
+            border-radius: 4px 16px 16px 4px;
+            box-shadow: inset 5px 0 15px rgba(0,0,0,0.5), 15px 15px 30px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .certificate-folder::after {
+            content: ''; 
+            position: absolute; 
+            top: 12px; bottom: 12px; left: 16px; right: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center py-10 antialiased text-gray-800">
+
+    <!-- SLIDE 1: 오프닝 & 핵심 제안 -->
+    <div class="slide-container pb-10">
+        <div class="flex h-[420px] w-full">
+            <div class="w-1/2 p-14 flex flex-col justify-center bg-gray-50">
+                <div class="inline-block px-3 py-1 bg-deep-navy text-white text-sm font-bold tracking-widest mb-6 w-max rounded">B2B PROPOSAL</div>
+                <h1 class="text-[42px] leading-tight font-extrabold text-deep-navy mb-4 tracking-tight">
+                    임직원 교육·문화복지<br><span class="text-mallang-blue">우대 프로그램</span> 제안
+                </h1>
+                <p class="text-xl font-medium text-gray-600 leading-relaxed">
+                    기관의 별도 비용 부담 없이,<br>임직원에게 자기계발과 문화경험의 선택지를 더합니다.
+                </p>
+            </div>
+            <div class="w-1/2 relative">
+                <!-- 1번 메인 사진 스터디 진행 모습 1 로 변경 -->
+                <img src="스터디 진행 모습 1.jpg" alt="스터디 진행 모습" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-50 to-transparent w-1/3"></div>
+            </div>
+        </div>
+
+        <div class="px-14 flex-1 flex flex-col justify-end">
+            <p class="text-sm text-gray-500 mb-4 font-medium">귀 기관은 내부 복지게시판 및 직원 안내채널을 통해 본 프로그램을 안내하고, 말랑링고는 재직 확인이 가능한 직원에게 약정된 특별 우대혜택을 제공합니다.</p>
+            
+            <div class="flex gap-5 items-stretch h-32">
+                <div class="flex-1 border-2 border-gray-100 rounded-xl flex flex-col overflow-hidden shadow-sm">
+                    <div class="bg-gray-100 py-1.5 text-center text-sm font-bold text-gray-600 tracking-wide">GROUP STUDY</div>
+                    <div class="flex flex-1 divide-x divide-gray-100">
+                        <div class="flex-1 flex flex-col items-center justify-center p-2">
+                            <span class="text-gray-500 text-sm font-semibold">6개월 수강권</span>
+                            <span class="text-3xl font-extrabold text-mallang-blue mt-1">10% <span class="text-lg">할인</span></span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center justify-center p-2">
+                            <span class="text-gray-500 text-sm font-semibold">12개월 수강권</span>
+                            <span class="text-3xl font-extrabold text-mallang-blue mt-1">10% <span class="text-lg">할인</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 border-2 border-gray-100 rounded-xl flex flex-col overflow-hidden shadow-sm">
+                    <div class="bg-gray-100 py-1.5 text-center text-sm font-bold text-gray-600 tracking-wide">NATIVE 1:1 CLINIC</div>
+                    <div class="flex flex-1 divide-x divide-gray-100">
+                        <div class="flex-1 flex flex-col items-center justify-center p-2">
+                            <span class="text-gray-500 text-[13px] font-semibold">20회 결제 시 +5회</span>
+                            <span class="text-3xl font-extrabold text-deep-navy mt-1">총 25회</span>
+                        </div>
+                        <div class="flex-1 flex flex-col items-center justify-center p-2">
+                            <span class="text-gray-500 text-[13px] font-semibold">50회 결제 시 +20회</span>
+                            <span class="text-3xl font-extrabold text-deep-navy mt-1">총 70회</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-[280px] bg-deep-navy rounded-xl flex flex-col items-center justify-center shadow-lg relative overflow-hidden text-center p-4">
+                    <div class="absolute -right-6 -top-6 w-20 h-20 bg-blue-600 rounded-full opacity-20 blur-xl"></div>
+                    <span class="text-gray-300 font-semibold mb-1">기관 부담 비용</span>
+                    <span class="text-[52px] leading-none font-extrabold text-white">0<span class="text-3xl">원</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: 공간 및 신뢰도 증명 -->
+    <div class="slide-container p-14 pb-12 flex flex-col">
+        <h2 class="text-3xl font-extrabold text-deep-navy mb-2">영어를 배우는 곳을 넘어, 실제로 사용하는 곳</h2>
+        <p class="text-lg text-gray-600 font-medium mb-10">말랑링고 평생교육원은 <span class="text-mallang-blue font-bold">영어회화 교육 + 외국인 문화교류 + 자기계발 커뮤니티</span>가 결합된 교육공간입니다.<br>단순히 정해진 강의를 듣고 돌아가는 공간이 아니라, 배우고 연습하고 실제로 대화하며 공간을 활용하는 환경을 지향합니다.</p>
+
+        <div class="flex gap-8 mb-10">
+            <div class="flex-1 bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center justify-center">
+                <p class="text-gray-500 font-bold mb-2">현재 회원</p>
+                <p class="text-5xl font-extrabold text-deep-navy">약 150명</p>
+                <p class="text-sm text-gray-400 mt-2">안정적인 회원 규모 증가</p>
+            </div>
+            <div class="flex-1 bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center justify-center">
+                <p class="text-gray-500 font-bold mb-2">교육·커뮤니티 공간</p>
+                <p class="text-5xl font-extrabold text-deep-navy">약 120평</p>
+                <p class="text-sm text-gray-400 mt-2">울산 중심 삼산 롯데/현대백화점 인근</p>
+            </div>
+            <div class="flex-1 bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col items-center justify-center">
+                <p class="text-gray-500 font-bold mb-2">차량 주차 가능</p>
+                <p class="text-5xl font-extrabold text-deep-navy">약 40대</p>
+                <p class="text-sm text-gray-400 mt-2">퇴근 후에도 편리한 접근성</p>
+            </div>
+        </div>
+
+        <div class="flex gap-10 flex-1">
+            <div class="w-1/2 flex gap-4">
+                <img src="학원 내부 사진(입구 앞쪽).jpg" alt="학원 입구" class="w-1/2 rounded-xl object-cover shadow-sm border border-gray-100">
+                <img src="학원 내부 사진(뒤쪽).jpg" alt="학원 내부" class="w-1/2 rounded-xl object-cover shadow-sm border border-gray-100">
+            </div>
+            <div class="w-1/2 flex flex-col justify-center">
+                <!-- 하이라이트 박스 제거 및 텍스트 자체 강조 적용 -->
+                <ul class="space-y-6 pl-2">
+                    <li class="flex items-start"><span class="text-mallang-blue mr-3 font-bold text-xl leading-none mt-0.5">✓</span> <span class="text-gray-700 font-medium text-[17px]"><span class="text-mallang-blue font-extrabold text-[18px]">교육청 정식 등록</span> 평생교육원</span></li>
+                    <li class="flex items-start"><span class="text-mallang-blue mr-3 font-bold text-xl leading-none mt-0.5">✓</span> <span class="text-gray-700 font-medium text-[17px]">출입국 관련 공식 절차에 따라 <span class="text-deep-navy font-extrabold text-[18px]">실제 외국인 상주 직원</span> 정식 고용·운영</span></li>
+                    <li class="flex items-start"><span class="text-mallang-blue mr-3 font-bold text-xl leading-none mt-0.5">✓</span> <span class="text-gray-700 font-medium text-[17px]"><span class="text-mallang-blue font-extrabold text-[18px]">자체 제작 교재</span> 및 수준별 체계적인 커리큘럼</span></li>
+                    <li class="flex items-start"><span class="text-mallang-blue mr-3 font-bold text-xl leading-none mt-0.5">✓</span> <span class="text-gray-700 font-medium text-[17px]">울산 최대 외국인 커뮤니티 <span class="text-deep-navy font-extrabold text-[18px]">'Ulsan Online' Premium Partner</span></span></li>
+                    <li class="flex items-start"><span class="text-mallang-blue mr-3 font-bold text-xl leading-none mt-0.5">✓</span> <span class="text-gray-700 font-medium text-[17px]"><span class="text-mallang-blue font-extrabold text-[18px]">10개 이상 지점 운영</span> 법인 교육기업의 노하우 기반</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: 단계별 커리큘럼 -->
+    <div class="slide-container p-14 pb-8">
+        <div class="mb-2">
+            <h2 class="text-3xl font-extrabold text-deep-navy mb-2">영어가 처음인 직원부터 Advanced까지</h2>
+            <p class="text-lg text-gray-600 font-medium">누구나 현재 수준에서 시작할 수 있는 체계적인 단계별 커리큘럼</p>
+        </div>
+
+        <div class="relative w-full flex-1 mt-4">
+            <!-- 상승 대각선 화살표 배경 -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1168 500" preserveAspectRatio="none">
+                <path d="M 100 450 C 400 450, 700 350, 1050 80" fill="none" stroke="#f3f4f6" stroke-width="24" stroke-linecap="round"/>
+                <path d="M 100 450 C 400 450, 700 350, 1050 80" fill="none" stroke="#0084FF" stroke-width="4" stroke-dasharray="10 10" stroke-linecap="round"/>
+                <polygon points="1040,65 1065,70 1055,95" fill="#0084FF" transform="rotate(-15 1050 80)"/>
+            </svg>
+
+            <!-- 우상향 계단식 배치 -->
+            <div class="absolute w-full h-full flex justify-between">
+                
+                <div class="w-[19%] flex flex-col items-center justify-end pb-4">
+                    <div class="flex gap-1.5 h-[110px] mb-3">
+                        <img src="비기너 교재.jpg" class="h-full object-contain drop-shadow-md rounded">
+                        <img src="리스닝 워크북(비기너, 베이직용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                    </div>
+                    <div class="text-center bg-white/95 p-3 rounded-lg shadow-md border border-gray-100 w-full">
+                        <div class="text-mallang-blue font-extrabold text-lg">01 BEGINNER</div>
+                        <p class="text-[12px] font-bold text-gray-800 mt-1">왕초보 과정, 입 열기 연습</p>
+                        <p class="text-[11px] text-gray-500 mt-1 leading-tight">별도 <span class="font-bold text-deep-navy">Listening Workbook</span><br>원어민 직접 Script 제작·녹음</p>
+                    </div>
+                </div>
+
+                <div class="w-[19%] flex flex-col items-center justify-end pb-[90px]">
+                    <div class="flex gap-1.5 h-[110px] mb-3">
+                        <img src="베이직 교재.jpg" class="h-full object-contain drop-shadow-md rounded">
+                        <img src="리스닝 워크북(비기너, 베이직용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                    </div>
+                    <div class="text-center bg-white/95 p-3 rounded-lg shadow-md border border-gray-100 w-full">
+                        <div class="text-mallang-blue font-extrabold text-lg">02 BASIC</div>
+                        <p class="text-[12px] font-bold text-gray-800 mt-1">문법 확장 및 실제 대화 연결</p>
+                        <p class="text-[11px] text-gray-500 mt-1 leading-tight">별도 <span class="font-bold text-deep-navy">Listening Workbook</span><br>문법+표현+Listening 동시 훈련</p>
+                    </div>
+                </div>
+
+                <div class="w-[19%] flex flex-col items-center justify-end pb-[170px]">
+                    <div class="flex gap-1.5 h-[110px] mb-3">
+                        <img src="프리인터 교재(프리인터, 인터미디엇용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                    </div>
+                    <div class="text-center bg-white/95 p-3 rounded-lg shadow-md border border-gray-100 w-full">
+                        <div class="text-mallang-blue font-extrabold text-lg">03 PRE-INTER</div>
+                        <p class="text-[12px] font-bold text-gray-800 mt-1">아는 영어를 실제 대화로</p>
+                        <p class="text-[11px] text-gray-500 mt-1 leading-tight">기초 영어 활용<br>자연스럽고 긴 문장 만들기</p>
+                    </div>
+                </div>
+
+                <div class="w-[19%] flex flex-col items-center justify-end pb-[250px]">
+                    <div class="flex gap-1.5 h-[110px] mb-3">
+                        <img src="프리인터 교재(프리인터, 인터미디엇용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                        <img src="컨버세시션 워크북(인터미디엇용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                    </div>
+                    <div class="text-center bg-white/95 p-3 rounded-lg shadow-md border border-gray-100 w-full">
+                        <div class="text-mallang-blue font-extrabold text-lg">04 INTERMEDIATE</div>
+                        <p class="text-[12px] font-bold text-gray-800 mt-1">다양한 주제 의견 표현</p>
+                        <p class="text-[11px] text-gray-500 mt-1 leading-tight">별도 <span class="font-bold text-deep-navy">Conversation Workbook</span><br>Free Talking, 자연스러운 대화</p>
+                    </div>
+                </div>
+
+                <div class="w-[19%] flex flex-col items-center justify-end pb-[330px]">
+                    <div class="flex gap-1.5 h-[110px] mb-3">
+                        <img src="영자신문 교재(어드밴스드용).jpg" class="h-full object-contain drop-shadow-md rounded">
+                    </div>
+                    <div class="text-center bg-white/95 p-3 rounded-lg shadow-md border border-gray-100 w-full">
+                        <div class="text-mallang-blue font-extrabold text-lg">05 ADVANCED</div>
+                        <p class="text-[12px] font-bold text-gray-800 mt-1">상급 자유 토론 및 시사</p>
+                        <p class="text-[11px] text-gray-500 mt-1 leading-tight"><span class="font-bold text-deep-navy">자체 영자신문 (MalLang Times)</span><br>사회·비즈니스 이슈 영어 토론</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: 성취와 동기부여 -->
+    <div class="slide-container flex flex-row">
+        <div class="w-5/12 bg-gray-50 p-14 pb-12 flex flex-col justify-center border-r border-gray-100">
+            <h2 class="text-4xl font-extrabold text-deep-navy mb-6 leading-tight">6개월의 꾸준함을<br>하나의 성취로</h2>
+            <p class="text-lg text-gray-600 font-medium mb-10 leading-relaxed">
+                말랑링고는 단순히 수업만 제공하지 않습니다.<br>학습을 지속할 수 있도록, 6개월 과정을 성실하게 이수한 회원에게 자체 과정 수료증을 제공합니다.
+            </p>
+            <p class="text-[15px] text-gray-500 mb-10 leading-relaxed">일정 기간 꾸준히 학습하고 과정을 끝냈다는 성취감을 제공하여 다음 단계의 영어학습으로 이어질 수 있도록 동기를 부여합니다.</p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Small Group Study</div>
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Level-based Curriculum</div>
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Original Materials</div>
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Speaking Practice</div>
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Teacher Feedback</div>
+                <div class="bg-white px-4 py-3 rounded-lg shadow-sm border border-gray-200 text-center font-bold text-deep-navy text-sm">Continuous Motivation</div>
+            </div>
+        </div>
+        <div class="w-7/12 bg-deep-navy flex items-center justify-center p-14 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            <!-- 수료증 네이비 케이스 효과 -->
+            <div class="certificate-folder w-full max-w-[420px] aspect-[1/1.35] flex items-center justify-center p-4 z-10 transition-transform duration-500 hover:scale-105">
+                <div class="w-full h-full bg-white shadow-2xl p-1 relative z-10 flex items-center justify-center">
+                    <img src="6개월 완주 수료증.jpg" alt="6개월 완주 수료증" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: 1:1 맞춤 클리닉 -->
+    <div class="slide-container p-14 pb-12 flex flex-col">
+        <h2 class="text-3xl font-extrabold text-deep-navy mb-2">직원마다 다른 영어의 목적, 1:1로 맞춰드립니다</h2>
+        <p class="text-lg text-gray-600 font-medium mb-10">Native 1:1 Clinic은 개인의 현재 수준, 직업, 업무, 유학 등 목적에 따라 맞춤 설계할 수 있습니다.</p>
+
+        <!-- 끝선 정렬을 위한 items-stretch 추가 -->
+        <div class="flex gap-10 flex-1 items-stretch">
+            <div class="w-5/12 relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-full flex flex-col">
+                <img src="1on1 클리닉 진행 모습.jpg" alt="1대1 클리닉" class="w-full h-full object-cover object-center flex-1">
+                <div class="absolute bottom-0 left-0 w-full bg-deep-navy/95 text-white p-5 backdrop-blur-md">
+                    <h4 class="text-lg font-extrabold text-yellow-400 mb-2">ACTUAL CASE</h4>
+                    <p class="text-[15px] font-bold mb-1">현재 호주 유학을 준비 중인 수강생의 Writing 첨삭</p>
+                    <p class="text-xs text-gray-300 leading-relaxed">비즈니스 전문 강사진의 지도로 Grammar, Sentence Structure, Logical Flow, Vocabulary, Natural Expressions 맞춤 교정 (IELTS 대비 지도 가능)</p>
+                </div>
+            </div>
+            
+            <div class="w-7/12 grid grid-cols-2 gap-5 h-full">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 h-full">
+                    <h3 class="text-mallang-blue font-extrabold text-xl mb-4 border-b pb-2">CONVERSATION</h3>
+                    <ul class="space-y-2 text-gray-700 font-medium">
+                        <li>• Free Talking</li>
+                        <li>• Daily English</li>
+                        <li>• Travel English</li>
+                        <li>• Situational English</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 h-full">
+                    <h3 class="text-mallang-blue font-extrabold text-xl mb-4 border-b pb-2">TEST & INTERVIEW</h3>
+                    <ul class="space-y-2 text-gray-700 font-medium">
+                        <li>• OPIc</li>
+                        <li>• English Interview</li>
+                        <li>• Speaking</li>
+                        <li>• IELTS</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 h-full">
+                    <h3 class="text-mallang-blue font-extrabold text-xl mb-4 border-b pb-2">ACADEMIC</h3>
+                    <ul class="space-y-2 text-gray-700 font-medium">
+                        <li>• Writing</li>
+                        <li>• Essay Correction</li>
+                        <li>• Presentation</li>
+                        <li>• Study Abroad Preparation</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 h-full">
+                    <h3 class="text-mallang-blue font-extrabold text-xl mb-4 border-b pb-2">PROFESSIONAL</h3>
+                    <ul class="space-y-2 text-gray-700 font-medium">
+                        <li>• Business English</li>
+                        <li>• Medical Terminology</li>
+                        <li>• Human Biology</li>
+                        <li>• Tech & AI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: 비즈니스 & 프로페셔널 (전면 개편) -->
+    <div class="slide-container bg-deep-navy text-white flex flex-col">
+        
+        <!-- Hero Header: 워크숍 사진을 상단 배경으로 활용 -->
+        <div class="flex h-[320px] w-full shrink-0 relative">
+            <div class="w-[55%] p-14 flex flex-col justify-center bg-deep-navy relative z-10">
+                <div class="absolute inset-y-0 -right-32 w-64 bg-gradient-to-r from-[#0B192C] via-[#0B192C]/90 to-transparent"></div>
+                
+                <h2 class="text-[38px] font-extrabold text-white mb-4 leading-tight z-20">업무자료를 가져오면,<br>그 자료가 수업이 됩니다.</h2>
+                <p class="text-xl text-blue-300 font-medium z-20">실제 업무에 바로 연결되는 Business & Professional English</p>
+            </div>
+            <div class="w-[45%] relative">
+                <!-- 워크숍 배경 사진 -->
+                <img src="비지니스 워크숍 진행 모습.jpg" alt="워크숍 진행 모습" class="w-full h-full object-cover object-[70%_center]">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#0B192C] to-transparent w-1/3"></div>
+            </div>
+        </div>
+        
+        <div class="px-14 pb-10 flex gap-6 flex-1 mt-2 min-h-0">
+            <!-- Left Column: 강좌 및 교수진 소개 -->
+            <div class="w-[60%] flex flex-col gap-4">
+                
+                <div class="bg-white/10 rounded-xl p-5 border border-white/20 backdrop-blur shadow-md">
+                    <p class="text-[14px] text-gray-300 font-medium mb-3">수강생이 실제 업무에서 사용하는 자료를 기반으로 맞춤수업 가능</p>
+                    <div class="flex flex-wrap gap-2 text-[12px] font-semibold">
+                        <span class="bg-mallang-blue px-3 py-1.5 rounded-full shadow-sm">PPT</span>
+                        <span class="bg-mallang-blue px-3 py-1.5 rounded-full shadow-sm">Presentation Script</span>
+                        <span class="bg-mallang-blue px-3 py-1.5 rounded-full shadow-sm">Business Email</span>
+                        <span class="bg-mallang-blue px-3 py-1.5 rounded-full shadow-sm">Meeting & Interview</span>
+                        <span class="bg-mallang-blue px-3 py-1.5 rounded-full shadow-sm">Overseas Client</span>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/20">
+                        <h4 class="text-yellow-400 font-bold mb-1 text-[13px]">SPA COURSE</h4>
+                        <p class="text-[13px] text-gray-300 leading-relaxed">대기업 영어 Speaking 시험 SPA 대비. 예상 질문 대응, 논리적 답변 구성, 실제 시험형 즉흥 질문 대응 훈련.</p>
+                    </div>
+                </div>
+
+                <!-- 강사진 (공백 최소화 및 규격 고정) -->
+                <div class="flex gap-4 flex-1 min-h-0">
+                    <div class="flex-1 bg-white rounded-xl flex items-center shadow-lg border border-gray-200 p-4 gap-4">
+                        <div class="w-24 h-32 rounded-lg overflow-hidden shrink-0 border border-gray-200 shadow-sm bg-gray-100">
+                            <img src="비지니스 전문 교수진(Anthony).png" alt="Anthony" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <h4 class="text-deep-navy font-extrabold text-[17px] mb-1">Dr. Anthony Bendik</h4>
+                            <p class="text-[12px] text-gray-700 mb-2 font-bold leading-snug">비즈니스 교재 저자<br>국내 대학 10년 이상 강의</p>
+                            <p class="text-[11px] text-gray-500 font-medium leading-tight">Business, Medical Terminology, IELTS / Academic Guidance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1 bg-white rounded-xl flex items-center shadow-lg border border-gray-200 p-4 gap-4">
+                        <div class="w-24 h-32 rounded-lg overflow-hidden shrink-0 border border-gray-200 shadow-sm bg-gray-100">
+                            <!-- 엑박 났던 파일명 원본 확장자(JPG)로 정확히 매핑 -->
+                            <img src="비지니스 전문 교수진(Benjamin).jpg" alt="Benjamin" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 flex flex-col justify-center">
+                            <h4 class="text-deep-navy font-extrabold text-[17px] mb-1">Benjamin W. Slater</h4>
+                            <p class="text-[12px] text-gray-700 mb-2 font-bold leading-snug">울산대, UNIST 등 대학 강의<br>25년+ Teaching</p>
+                            <p class="text-[11px] text-gray-500 font-medium leading-tight">Presentation, Business,<br>Tech & AI, IELTS, Academic Writing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: 포스터 박스 (유리 프레임 레이아웃) -->
+            <div class="w-[40%] bg-white/10 rounded-xl p-6 border border-white/20 shadow-md flex flex-col">
+                <div class="mb-4 border-b border-white/20 pb-3">
+                    <h4 class="text-[22px] font-extrabold text-white leading-tight">BUSINESS SPECIAL<br><span class="text-yellow-400">WORKSHOP</span></h4>
+                </div>
+                
+                <div class="flex gap-5 flex-1 min-h-0 items-start">
+                    <!-- 포스터 썸네일 (비율 완벽 유지, 좌측 배치) -->
+                    <div class="w-1/2 h-full shrink-0 flex items-start justify-center">
+                        <img src="비지니스 원데이 워크숍 특강 포스터.jpg" alt="특강 포스터" class="max-w-full max-h-full object-contain object-top shadow-lg border border-white/10 rounded">
+                    </div>
+                    
+                    <!-- 설명 텍스트 (단어단위 줄바꿈) -->
+                    <div class="w-1/2 flex flex-col">
+                        <p class="text-[14px] text-gray-200 font-bold mb-3 leading-relaxed">분기 1회 이상 (주말 진행).</p>
+                        <p class="text-[13px] text-gray-300 leading-relaxed">Business 전문 강사진과 함께하는 비즈니스 영어 특강으로 직원들이 부담 없이 체험할 수 있는 기회를 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: 120평 공간 및 커뮤니티 -->
+    <div class="slide-container p-14 pb-12 flex flex-col">
+        <h2 class="text-3xl font-extrabold text-deep-navy mb-2">수업 90분만 이용하는 곳이 아닙니다.</h2>
+        <p class="text-lg text-gray-600 font-medium mb-8">공부하고, 일하고, 책을 읽고, 사람을 만나고, 영어를 사용하는 <span class="text-mallang-blue font-bold">공간 자유이용</span></p>
+
+        <div class="flex gap-8 flex-1">
+            <div class="w-[45%] flex flex-col">
+                <img src="스터디 진행 모습 2.jpg" alt="스터디" class="w-full h-48 object-cover rounded-xl shadow-sm mb-4 border border-gray-100">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex-1 flex flex-col justify-center">
+                    <h3 class="font-extrabold text-deep-navy mb-1 text-[20px]">120평 회원 공간 활용</h3>
+                    <p class="text-[13px] text-gray-500 mb-5">운영시간: 월~목 10:00~22:00 / 토~일 10:00~14:00</p>
+                    
+                    <!-- 텍스트 폰트 사이즈 대폭 상향 -->
+                    <div class="grid grid-cols-2 gap-y-5 gap-x-4 text-[15px] font-medium text-gray-700">
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">STUDY</span> 영어 공부 및 수업 복습</div>
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">PREPARE</span> OPIc / IELTS 준비</div>
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">WORK</span> 노트북 업무 및 독서</div>
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">ASSIGNMENT</span> 대학생 과제</div>
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">WAIT</span> 주부 회원 자녀 픽업 대기</div>
+                        <div><span class="text-mallang-blue font-extrabold block text-[16px] mb-1">CONNECT</span> 원어민과 자연스러운 대화</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-[55%] flex flex-col">
+                <div class="flex gap-4 mb-4 h-48">
+                    <img src="외부 행사 진행 모습(카페 방문, 문화 교류).jpg" alt="문화 교류" class="w-1/2 h-full object-cover rounded-xl shadow-sm border border-gray-100">
+                    <img src="스터디 진행 모습 3.jpg" alt="커뮤니티" class="w-1/2 h-full object-cover rounded-xl shadow-sm border border-gray-100">
+                </div>
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 flex-1 flex flex-col justify-center">
+                    <h3 class="font-extrabold text-2xl text-mallang-blue mb-2">외국에 가지 않아도<br>다양한 외국인과 실제로 대화하는 환경</h3>
+                    <p class="text-[14px] text-gray-600 mb-5 mt-2 font-medium leading-relaxed">말랑링고는 외국인 상주 직원 및 울산 최대 규모 외국인 커뮤니티 <b>Ulsan Online</b>과 긴밀하게 협업합니다. 영어를 배우는 곳을 넘어 대화·문화교류·관계가 형성되는 로컬 커뮤니티를 지향합니다.</p>
+                    <div class="flex flex-wrap gap-2 text-[13px] font-bold text-deep-navy">
+                        <span class="bg-white px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">Language Exchange</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">Coffee Meetup</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">Potluck & Holiday Party</span>
+                        <span class="bg-white px-3 py-1.5 rounded-full border border-blue-200 shadow-sm">One-Day Class (Dance, 3D Design 등)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: 로컬 네트워크 혜택 및 클로징 -->
+    <div class="slide-container p-14 flex flex-col">
+        <h2 class="text-3xl font-extrabold text-deep-navy mb-2 text-center">하나의 영어수강권을 넘어, 더 넓어지는 직원 복지혜택</h2>
+        <p class="text-lg text-gray-600 font-medium mb-6 text-center">직원에게는 새로운 성장의 기회를, 기관에는 부담 없는 복지 선택지를.</p>
+
+        <div class="flex flex-col gap-5 flex-1 mb-6 min-h-0">
+            <!-- TOP ROW: OPIc & MAPS -->
+            <div class="flex gap-5 h-[230px]">
+                <!-- OPIc 15% OFF 극대화 -->
+                <div class="w-[42%] bg-blue-50 border border-blue-200 rounded-xl p-6 flex flex-row items-center justify-between gap-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent z-0"></div>
+                    <img src="OPIc 제휴처 안내(15% 할인).jpg" alt="OPIc" class="h-40 w-auto object-contain rounded bg-white shadow-sm p-1 z-10 shrink-0">
+                    <div class="z-10 flex flex-col justify-center text-left flex-1 pr-2">
+                        <p class="text-[38px] leading-tight font-black text-mallang-blue mb-2">OPIc<br>15% OFF</p>
+                        <p class="text-[15px] text-gray-700 font-bold mb-1">공식 응시료 단독 할인</p>
+                        <p class="text-[12px] text-gray-500">수강생 전용 링크 제공</p>
+                    </div>
+                </div>
+                
+                <!-- MAP & PARKING -->
+                <div class="w-[58%] flex gap-4">
+                    <div class="flex-1 relative rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                        <img src="말랑링고 지도.jpg" alt="지도" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 w-full bg-white/95 p-3 text-center border-t border-gray-100">
+                            <p class="text-[15px] font-extrabold text-deep-navy">울산 삼산 중심 (백화점 인근)</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 relative rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                        <img src="주차장 전경.jpg" alt="주차장" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 w-full bg-white/95 p-3 text-center border-t border-gray-100">
+                            <p class="text-[15px] font-extrabold text-deep-navy">약 40대 차량 주차 가능</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Network & QR Code 결합 -->
+            <div class="flex gap-5 h-[130px]">
+                <div class="w-[55%] bg-gray-50 border border-gray-200 rounded-xl p-5 flex items-center justify-between shadow-sm">
+                    <div>
+                        <p class="text-lg font-extrabold text-deep-navy mb-2">LOCAL BENEFIT NETWORK</p>
+                        <p class="text-[13px] text-gray-500 font-medium">원데이클래스, 3D 프린팅 등 지역 교육·문화 시설 우대</p>
+                    </div>
+                    <div class="flex gap-3 h-[75px]">
+                        <img src="제휴업체(드오브필라테스).jpg" alt="필라테스" class="h-full w-auto object-contain bg-white rounded-lg border border-gray-100 p-1.5 shadow-sm">
+                        <img src="제휴업체(화이트e치과).jpg" alt="치과" class="h-full w-auto object-contain bg-white rounded-lg border border-gray-100 p-1.5 shadow-sm">
+                        <img src="제휴업체(뮤즐리 음악학원).jpg" alt="음악학원" class="h-full w-auto object-contain bg-white rounded-lg border border-gray-100 p-1.5 shadow-sm">
+                    </div>
+                </div>
+                
+                <div class="w-[45%] bg-deep-navy rounded-xl p-4 flex items-center justify-between text-white shadow-md">
+                    <div class="pl-4">
+                        <h3 class="font-extrabold text-2xl mb-1 tracking-widest text-yellow-400">MALLANG LINGO</h3>
+                        <p class="text-[13px] text-gray-300 font-medium">직원 복지를 위한 새로운 선택지</p>
+                    </div>
+                    <img src="말랑링고 홈페이지 QR 코드.jpg" alt="QR코드" class="w-20 h-20 rounded-lg object-contain bg-white p-1">
+                </div>
+            </div>
+        </div>
+
+        <!-- 핵심 요약 바 (단일 통합 박스 및 텍스트 극대화) -->
+        <div class="bg-gray-100 rounded-xl p-5 flex items-center justify-between mt-auto border border-gray-200 shadow-sm w-full">
+            <div class="flex-1 text-center border-r border-gray-300">
+                <p class="text-sm text-gray-500 font-extrabold mb-1">12개월권</p>
+                <p class="text-3xl font-black text-mallang-blue">10% 할인</p>
+            </div>
+            <div class="flex-1 text-center border-r border-gray-300">
+                <p class="text-sm text-gray-500 font-extrabold mb-1">NATIVE 1:1 (20회)</p>
+                <p class="text-3xl font-black text-deep-navy">총 25회 <span class="text-lg text-mallang-blue font-bold">(+5회)</span></p>
+            </div>
+            <div class="flex-1 text-center">
+                <p class="text-sm text-gray-500 font-extrabold mb-1">NATIVE 1:1 (50회)</p>
+                <p class="text-3xl font-black text-deep-navy">총 70회 <span class="text-lg text-mallang-blue font-bold">(+20회)</span></p>
+            </div>
+            <div class="w-[320px] bg-deep-navy text-white py-4 rounded-xl flex flex-col items-center justify-center ml-5 shadow-lg relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 w-20 h-20 bg-blue-500 rounded-full opacity-30 blur-xl"></div>
+                <p class="text-[13px] font-semibold text-gray-300 mb-1 z-10">귀 기관 별도 예산 집행</p>
+                <p class="text-[34px] leading-none font-black tracking-tight z-10">기관 부담 비용 0원</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
