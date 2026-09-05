@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 모바일에서 1280px 너비에 맞춰 전체 화면이 쏙 들어오게 강제 축소 (확대/축소 허용) -->
+    <meta name="viewport" content="width=1280, user-scalable=yes">
     <title>말랑링고 임직원 교육·문화복지 우대 프로그램 제안</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,14 +29,6 @@
             margin-bottom: 3rem;
             display: flex; 
             flex-direction: column;
-        }
-        /* 스마트폰 화면(모바일)에서 적용될 규칙 */
-        @media (max-width: 768px) {
-        .slide-container {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 500px !important;
-        padding: 20px !important; /* 모바일에서는 여백을 조금 줄여줌 */
         }
         .text-mallang-blue { color: #0084FF; }
         .bg-mallang-blue { background-color: #0084FF; }
