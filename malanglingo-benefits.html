@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>말랑링고 재직 임직원 특별 우대혜택</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+  :root{
+    --blue:#1FA9E4;
+    --blue-deep:#1187C4;
+    --navy:#0B1C3D;
+    --navy-2:#132a52;
+    --ink:#0B1C3D;
+    --muted:#5A6B87;
+    --line:#E3E8F1;
+    --bg:#F4F6FB;
+    --paper:#FFFFFF;
+    --tint:#EAF6FD;
+    --yellow:#FFD400;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  html,body{background:var(--bg);font-family:'Pretendard Variable', Pretendard, -apple-system, system-ui, sans-serif;color:var(--ink);word-break:keep-all;overflow-wrap:break-word;}
+  h1,h2,h3,h4,h5,h6,p,span,div,li,small,b{word-break:keep-all;overflow-wrap:break-word;}
+  body{display:flex;flex-direction:column;align-items:center;padding:24px 12px;gap:20px;}
+
+  .page{
+    width:210mm;height:297mm;background:var(--paper);
+    position:relative;overflow:hidden;
+    box-shadow:0 20px 60px rgba(11,28,61,.14), 0 2px 6px rgba(11,28,61,.06);
+    display:flex;flex-direction:column;
+  }
+  @media print{
+    @page{size:A4 portrait;margin:0;}
+    body{background:#fff;padding:0;gap:0;}
+    .page{box-shadow:none;page-break-after:always;}
+    .page:last-child{page-break-after:auto;}
+  }
+
+  /* ---------- Shared ---------- */
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:2mm;}
+  .sec-title{font-size:12.5pt;font-weight:800;letter-spacing:-.025em;color:var(--ink);}
+  .sec-title .accent{color:var(--blue-deep);}
+  .sec-kicker{font-size:8.5pt;font-weight:700;color:var(--blue-deep);letter-spacing:.18em;text-transform:uppercase;}
+  .sec-note{font-size:8.5pt;color:var(--muted);font-weight:500;}
+
+  /* photo utility */
+  .photo{
+    background:#EDEFF5;border-radius:10px;overflow:hidden;
+    background-size:cover;background-position:center;
+  }
+
+  /* ---------- Header (page 1) ---------- */
+  .header{
+    background:linear-gradient(180deg,#0B1C3D 0%, #122c58 100%);
+    color:#fff;padding:5mm 12mm 5mm 12mm;position:relative;overflow:hidden;
+    flex-shrink:0;
+  }
+  .header::after{
+    content:"";position:absolute;right:-40mm;top:-40mm;width:130mm;height:130mm;
+    background:radial-gradient(circle at 30% 30%, rgba(31,169,228,.32), transparent 60%);
+    pointer-events:none;
+  }
+  .brandrow{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1;}
+  .label{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.22);
+    color:#EAF6FD;font-size:9.5pt;font-weight:600;
+    padding:6px 12px;border-radius:999px;letter-spacing:-.01em;
+  }
+  .label .dot{width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px rgba(31,169,228,.25);}
+  .label .em{
+    padding:2px 8px;border-radius:6px;background:rgba(31,169,228,.28);
+    color:#fff;font-weight:800;font-size:9pt;
+  }
+  .brand{display:flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-.02em;}
+  .brand .club{margin-left:6px;}
+  .brand .m{color:var(--blue);font-size:14pt;}
+  .brand .lg{color:var(--blue);font-size:14pt;}
+  .brand .club{color:#B7C4DB;font-size:8.5pt;font-weight:600;letter-spacing:.14em;margin-left:2px;text-transform:uppercase;}
+
+  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:3mm;position:relative;z-index:1;align-items:stretch;}
+  .hero-text{display:flex;flex-direction:column;justify-content:flex-end;gap:3mm;height:100%;padding:1mm 0 0 0;}
+  h1.headline{
+    font-size:26pt;
+    line-height:1.28;
+    font-weight:800;
+    letter-spacing:-.035em;
+    color:#fff;
+    text-wrap:pretty;
+    word-break:keep-all;
+    padding:0;
+  }
+  h1.headline .hi{
+    color:var(--yellow);
+    font-size:1.28em;
+    font-weight:900;
+    letter-spacing:-.045em;
+    line-height:1.05;
+    vertical-align:-0.04em;
+    margin-right:.03em;
+    display:inline-block;
+  }
+  .subcopy{color:#C8D3E7;font-size:10.5pt;line-height:1.55;font-weight:400;letter-spacing:-.01em;margin-top:0;word-break:keep-all;}
+  .subcopy b{color:#fff;font-weight:600;}
+  .hero-photo{
+    width:100%;height:44mm;border-radius:12px;overflow:hidden;
+    box-shadow:0 12px 24px rgba(0,0,0,.35);
+    background-image:url('assets/photo-teacher.jpg');background-size:cover;background-position:center;
+    position:relative;
+  }
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(11,28,61,.45));
+  }
+
+  /* ---------- Main ---------- */
+  main{padding:3.5mm 12mm 3mm 12mm;flex:1;display:flex;flex-direction:column;gap:1.8mm;min-height:0;}
+  .page:first-child main{padding-bottom:16mm;gap:1.4mm;justify-content:flex-start;}
+  .page:first-child main > section{flex-shrink:0;}
+  .page:first-child main > section:last-child{margin-bottom:14mm;}
+  .page + .page main{gap:3.5mm;}
+
+  /* ---------- Benefits ---------- */
+  .benefits{
+    background:#F7FAFF;border:1px solid #E1E9F5;border-radius:14px;
+    padding:4mm 6mm 4mm 6mm;position:relative;
+    box-shadow:inset 0 -3px 0 rgba(31,169,228,.08);
+  }
+  .benefits-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:3mm;}
+  .benefits-title{font-size:13pt;font-weight:800;letter-spacing:-.025em;color:var(--navy);}
+  .benefits-title small{display:block;font-size:8.5pt;color:var(--muted);font-weight:500;letter-spacing:0;margin-top:2px;}
+  .benefits-stamp{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--navy);color:#fff;font-size:8.5pt;font-weight:700;
+    padding:6px 10px;border-radius:999px;letter-spacing:.02em;
+  }
+  .benefits-stamp .k{color:var(--blue);}
+
+  .group-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4mm;}
+  .b-card{
+    background:#fff;border:1px solid #DDE6F3;border-radius:12px;padding:9px 14px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;
+  }
+  .b-card .lhs{display:flex;flex-direction:column;gap:2px;}
+  .b-card .cat{font-size:8.5pt;font-weight:800;color:var(--blue-deep);letter-spacing:.14em;text-transform:uppercase;}
+  .b-card .name{font-size:11pt;font-weight:700;color:var(--navy);letter-spacing:-.02em;}
+  .b-card .num{
+    font-size:30pt;font-weight:900;letter-spacing:-.04em;
+    color:#fff;line-height:1;white-space:nowrap;
+    background:linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+    padding:6px 14px 6px 14px;border-radius:10px;
+    box-shadow:0 6px 14px rgba(17,135,196,.28), inset 0 -3px 0 rgba(0,0,0,.12);
+    display:inline-flex;align-items:baseline;gap:3px;
+  }
+  .b-card .num .u{
+    font-size:11pt;font-weight:900;color:#FFD400;
+    letter-spacing:-.01em;
+  }
+
+  .clinic-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .c-card{
+    background:var(--navy);color:#fff;border-radius:12px;padding:7px 14px;
+    display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;position:relative;overflow:hidden;
+  }
+  .c-card::before{
+    content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,212,0,.22),transparent 65%);pointer-events:none;
+  }
+  .c-card .cat{font-size:8.5pt;font-weight:800;color:var(--blue);letter-spacing:.14em;text-transform:uppercase;}
+  .c-card .base{font-size:11pt;font-weight:700;color:#fff;margin-top:2px;letter-spacing:-.02em;}
+  .c-card .base .arrow{color:#5D74A0;font-weight:500;margin-left:4px;}
+  .c-card .sumline{font-size:10pt;color:#C8D3E7;font-weight:500;margin-top:4px;letter-spacing:-.015em;}
+  .c-card .sumline b{color:#fff;font-weight:800;font-size:13pt;letter-spacing:-.02em;}
+  .c-card .bonus-block{text-align:right;position:relative;z-index:1;}
+  .c-card .bonus-label{display:inline-block;font-size:6.5pt;font-weight:800;color:#0B1C3D;background:var(--yellow);letter-spacing:.16em;padding:1px 6px;border-radius:4px;text-transform:uppercase;margin-bottom:1px;}
+  .c-card .bonus-num{font-size:26pt;font-weight:900;letter-spacing:-.05em;line-height:.95;color:var(--yellow);display:block;}
+  .c-card .bonus-num .plus{font-size:16pt;font-weight:800;vertical-align:0.14em;margin-right:1px;}
+  .c-card .bonus-num .u{font-size:11pt;font-weight:800;color:var(--yellow);margin-left:1px;}
+  .c-card .bonus-sub{font-size:7pt;color:#8FA7CE;font-weight:600;letter-spacing:.06em;margin-top:1px;text-transform:uppercase;}
+
+  /* ---------- Curriculum ---------- */
+  .curr-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:10px;align-items:stretch;}
+  .curr-wrap .cur-card{justify-content:flex-start;min-height:78px;}
+  .cur-card{
+    border:1px solid var(--line);border-radius:12px;padding:9px 12px;background:#fff;
+    display:flex;flex-direction:column;gap:5px;
+  }
+  .cur-card .head{display:flex;align-items:center;gap:8px;}
+  .num-badge{
+    width:22px;height:22px;border-radius:6px;background:var(--tint);color:var(--blue-deep);
+    display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:9pt;flex-shrink:0;
+  }
+  .cur-card h4{font-size:10.5pt;font-weight:700;letter-spacing:-.02em;color:var(--navy);}
+  .cur-card h4 .hi{color:var(--blue-deep);font-weight:800;font-size:1em;letter-spacing:-.02em;vertical-align:baseline;margin:0;}
+  .cur-card .lvl{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px;}
+  .cur-card .lvl span{font-size:7.5pt;font-weight:600;color:var(--blue-deep);background:var(--tint);border-radius:4px;padding:2px 6px;letter-spacing:-.01em;}
+  .cur-card .lvl span.arrow{background:transparent;color:#B4C3DB;padding:2px 0;font-weight:700;}
+  .cur-card p{font-size:8.5pt;line-height:1.5;color:var(--muted);font-weight:400;letter-spacing:-.005em;}
+  .cur-card p b{color:var(--navy);font-weight:600;}
+  .cur-card ul{list-style:none;display:flex;flex-direction:column;gap:3px;margin-top:4px;}
+  .cur-card ul li{
+    font-size:8pt;font-weight:500;color:var(--navy);
+    background:#F3F5FA;border-radius:5px;padding:4px 8px;
+    letter-spacing:-.02em;white-space:nowrap;
+    display:flex;align-items:center;gap:5px;
+  }
+  .cur-card ul li b{color:var(--blue-deep);font-weight:800;}
+  .cur-card ul li .sep{color:#B4C3DB;font-weight:600;}
+  .cur-card ul li .goal{
+    margin-left:auto;
+    font-size:7.5pt;font-weight:700;color:var(--blue-deep);
+    background:#fff;border:1px solid var(--tint);
+    border-radius:999px;padding:1px 7px;
+    letter-spacing:-.015em;
+  }
+  .cur-card ul li.hot{background:var(--tint);color:var(--blue-deep);font-weight:700;}
+
+  /* Curriculum flow (Card 02) */
+  .curr-flow{display:flex;align-items:stretch;gap:4px;margin-top:4px;}
+  .curr-flow .fl-item{
+    flex:1;display:flex;flex-direction:column;gap:2px;
+    background:#F3F7FC;border:1px solid #E1EEF9;border-radius:6px;
+    padding:6px 8px;letter-spacing:-.015em;min-width:0;
+  }
+  .curr-flow .fl-item .fl-lvl{
+    font-size:6.5pt;font-weight:800;color:var(--blue-deep);
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+  .curr-flow .fl-item b{
+    font-size:8.5pt;font-weight:800;color:var(--navy);
+    line-height:1.15;letter-spacing:-.02em;
+  }
+  .curr-flow .fl-item em{
+    font-size:7.5pt;font-weight:600;color:var(--muted);
+    font-style:normal;
+  }
+  .curr-flow .fl-arrow{
+    align-self:center;color:#B4C3DB;font-weight:800;font-size:10pt;flex-shrink:0;
+  }
+  .cur-card .curr-note{margin-top:6px;font-size:8pt;color:var(--muted);line-height:1.5;}
+  .cur-card .curr-note b{color:var(--navy);font-weight:700;}
+
+  /* Clinic course (Card 03) */
+  .cur-card .head .spec-badges{margin-left:auto;display:flex;gap:4px;flex-shrink:0;}
+  .cur-card .head .spec-badges .spec{
+    font-size:7.5pt;font-weight:600;color:var(--muted);
+    background:#F3F5FA;border-radius:4px;padding:2px 7px;
+    letter-spacing:-.015em;white-space:nowrap;
+  }
+  .cur-card .head .spec-badges .spec b{color:var(--blue-deep);font-weight:800;}
+  .clinic-course{display:flex;flex-direction:column;gap:4px;margin-top:4px;}
+  .clinic-course .cl-col{
+    display:grid;grid-template-columns:60px 1fr;gap:8px;align-items:center;
+  }
+  .clinic-course .cl-cat{
+    font-size:6.5pt;font-weight:800;color:var(--blue-deep);
+    letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;
+  }
+  .clinic-course .cl-tags{display:flex;flex-wrap:wrap;gap:3px;}
+  .clinic-course .cl-tags span{
+    font-size:7.5pt;font-weight:600;color:var(--navy);
+    background:#F3F5FA;border-radius:4px;padding:2px 7px;
+    letter-spacing:-.015em;white-space:nowrap;
+  }
+  .clinic-course .cl-tags span.hot{background:var(--tint);color:var(--blue-deep);font-weight:700;}
+  .clinic-body{
+    display:grid;grid-template-columns:1fr auto;gap:12px;
+    align-items:center;margin-top:4px;
+  }
+  .clinic-summary{
+    padding-left:12px;border-left:2px solid var(--tint);
+  }
+  .clinic-summary p{
+    font-size:8pt;line-height:1.55;color:var(--muted);letter-spacing:-.01em;
+  }
+  .clinic-summary p b{color:var(--navy);font-weight:800;}
+
+  /* Curriculum row w/ photo */
+  .curr-with-photo{display:grid;grid-template-columns:1.35fr 1fr;gap:10px;align-items:stretch;}
+  .curr-photo{
+    border-radius:12px;height:100%;min-height:60mm;
+    background-image:url('assets/photo-group.jpg');background-size:cover;background-position:center;
+    position:relative;overflow:hidden;
+  }
+  .curr-photo .cap{
+    position:absolute;left:8px;bottom:8px;
+    background:rgba(11,28,61,.82);color:#fff;font-size:8pt;font-weight:600;
+    padding:5px 9px;border-radius:6px;letter-spacing:-.01em;
+    display:flex;align-items:center;gap:5px;
+  }
+  .curr-photo .cap .k{color:var(--blue);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:7pt;}
+
+  /* Additional (page 1 bottom) */
+  .add-grid{display:grid;grid-template-columns:.85fr .7fr 1.05fr 1.55fr;gap:8px;align-items:stretch;}
+  .a-card{border:1px solid var(--line);border-radius:12px;padding:9px 13px;background:#fff;display:flex;flex-direction:column;gap:5px;justify-content:center;}
+  .a-card .badge{font-size:6.5pt;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);}
+  .a-card .badge-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .a-card .badge-row .badge{margin:0;}
+  .a-card .badge-row .sep{color:#B4C3DB;font-weight:700;font-size:8pt;line-height:1;}
+  .a-card .badge-row .title-inline{font-size:9.5pt;font-weight:800;color:var(--navy);letter-spacing:-.02em;}
+  .a-card h5{font-size:9pt;font-weight:700;color:var(--navy);letter-spacing:-.02em;line-height:1.3;}
+  .a-card .big{font-size:16pt;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;margin-top:1px;}
+  .a-card .big .u{font-size:8.5pt;color:var(--blue-deep);margin-left:1px;}
+  .a-card .mega{font-size:28pt;font-weight:900;color:var(--navy);letter-spacing:-.05em;line-height:1;margin-top:2px;white-space:nowrap;}
+  .a-card .mega .u{font-size:13pt;font-weight:800;margin-left:2px;letter-spacing:0;}
+  .a-card p{font-size:7pt;color:var(--muted);line-height:1.5;}
+  .a-card p b{color:var(--navy);font-weight:600;}
+  .a-card .netlist{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px;align-items:flex-start;}
+  .a-card .netlist span{font-size:6.5pt;font-weight:500;color:var(--navy);background:#F3F5FA;border-radius:4px;padding:2px 5px;letter-spacing:-.03em;white-space:nowrap;}
+  .a-card .netlist span.row{font-weight:600;}
+  .a-card.partner{
+    background:linear-gradient(180deg,#0B1C3D 0%, #132a52 100%);
+    color:#fff;border:1px solid rgba(31,169,228,.35);position:relative;overflow:hidden;
+  }
+  .a-card.partner::after{
+    content:"";position:absolute;right:-20px;top:-20px;width:70px;height:70px;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,169,228,.35),transparent 65%);pointer-events:none;
+  }
+  .a-card.partner .badge{color:var(--blue);position:relative;z-index:1;}
+  .a-card.partner h5{color:#fff;position:relative;z-index:1;}
+  .a-card.partner p{color:#C8D3E7;position:relative;z-index:1;}
+  .a-card.partner p b{color:#fff;}
+  .a-card.partner .pmark{
+    display:inline-flex;align-items:center;gap:5px;margin-top:4px;
+    font-size:7.5pt;font-weight:700;color:#fff;letter-spacing:-.01em;position:relative;z-index:1;
+  }
+  .a-card.partner .pmark .brand-ul{color:var(--blue);font-weight:800;}
+
+  /* Highlighted OPIc discount card */
+  .a-card.highlight{
+    background:linear-gradient(180deg,#0B1C3D 0%, #132a52 100%);
+    color:#fff;border:1px solid rgba(31,169,228,.35);position:relative;overflow:hidden;
+  }
+  .a-card.highlight::after{
+    content:"";position:absolute;right:-24px;top:-24px;width:80px;height:80px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,212,0,.28),transparent 65%);pointer-events:none;
+  }
+  .a-card.highlight .badge{
+    color:#0B1C3D;background:var(--yellow);
+    padding:2px 7px;border-radius:4px;align-self:flex-start;
+    position:relative;z-index:1;
+  }
+  .a-card.highlight h5{color:#fff;position:relative;z-index:1;}
+  .a-card.highlight .badge-row .title-inline{color:#fff;position:relative;z-index:1;}
+  .a-card.highlight .badge-row .sep{color:rgba(255,255,255,.35);position:relative;z-index:1;}
+  .a-card.highlight .big{color:var(--yellow);position:relative;z-index:1;font-weight:900;letter-spacing:-.04em;}
+  .a-card.highlight .big .u{color:var(--yellow);font-weight:800;}
+  .a-card.highlight .mega{color:var(--yellow);position:relative;z-index:1;font-weight:900;letter-spacing:-.05em;text-shadow:0 2px 8px rgba(255,212,0,.18);}
+  .a-card.highlight .mega .u{color:var(--yellow);font-weight:800;}
+  .a-card.highlight p{color:#C8D3E7;position:relative;z-index:1;}
+  .a-card.highlight p b{color:#fff;font-weight:700;}
+
+  /* pager mark */
+  .pager{
+    position:absolute;left:12mm;bottom:4mm;font-size:7pt;color:var(--muted);
+    letter-spacing:.16em;font-weight:700;text-transform:uppercase;
+    z-index:5;
+  }
+  .pager .n{color:var(--navy);}
+  .pager.on-dark{color:rgba(255,255,255,.6);}
+  .pager.on-dark .n{color:#fff;}
+
+  /* ---------- Page 2 ---------- */
+  .page2-head{
+    background:var(--tint);padding:4mm 12mm 3.5mm 12mm;position:relative;
+    border-bottom:1px solid #D5E8F3;
+  }
+  .page2-head .brandrow{color:var(--navy);}
+  .page2-head .label{
+    background:#fff;border:1px solid #CFE4F0;color:var(--navy);
+  }
+  .page2-head .label .em{background:var(--blue);color:#fff;}
+  .page2-head h2{
+    font-size:17pt;font-weight:800;letter-spacing:-.035em;color:var(--navy);line-height:1.25;margin-top:3mm;
+  }
+  .page2-head h2 .hi{color:var(--blue-deep);}
+  .page2-head .sub{font-size:9.5pt;color:var(--muted);font-weight:500;margin-top:4px;letter-spacing:-.01em;}
+  .page2-head .sub b{color:var(--navy);font-weight:700;}
+
+  /* Space section */
+  .space-hero-grid{
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .space-photos-row{
+    display:grid;grid-template-columns:1fr 1.1fr;gap:10px;
+  }
+  .space-photos-row .photo{
+    min-height:38mm;border-radius:12px;
+  }
+  .space-photos-row .photo.a{background-image:url('assets/photo-space.jpg');background-size:cover;background-position:center 45%;}
+  .space-photos-row .photo.b{background-image:url('assets/photo-cafezone.jpg');background-size:cover;background-position:center 50%;}
+  .space-info{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 16px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .space-info h3{font-size:12pt;font-weight:800;color:var(--navy);letter-spacing:-.025em;}
+  .space-hero{display:flex;align-items:flex-end;gap:12px;margin-top:2px;}
+  .space-num{font-size:38pt;font-weight:800;letter-spacing:-.05em;color:var(--navy);line-height:.9;}
+  .space-num .u{font-size:14pt;color:var(--blue-deep);margin-left:2px;}
+  .space-copy{font-size:8.5pt;color:var(--muted);line-height:1.5;padding-bottom:6px;}
+  .space-copy b{color:var(--navy);font-weight:700;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:4px;}
+  .tag{font-size:7.5pt;font-weight:500;color:var(--navy);background:#F3F5FA;border-radius:4px;padding:3px 7px;letter-spacing:-.01em;}
+  .hours{
+    display:flex;gap:16px;margin-top:auto;font-size:9pt;color:var(--muted);
+    padding-top:6px;border-top:1px dashed var(--line);
+  }
+  .hours b{color:var(--navy);font-weight:700;}
+
+  .photo-cap{
+    position:absolute;left:8px;bottom:8px;
+    background:rgba(11,28,61,.82);color:#fff;font-size:8pt;font-weight:600;
+    padding:5px 9px;border-radius:6px;letter-spacing:-.01em;
+  }
+  .photo-cap .k{color:var(--blue);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:7pt;margin-right:5px;}
+  .photo{position:relative;}
+
+  /* Community */
+  .comm-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:10px;align-items:stretch;}
+  .comm-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .comm-photos .photo{border-radius:12px;min-height:0;height:100%;}
+  .comm-photos .photo.a{background-image:url('assets/photo-community.jpg');background-size:cover;background-position:center 30%;}
+  .comm-photos .photo.b{background-image:url('assets/photo-event.jpg');background-size:cover;background-position:center 40%;}
+  .comm-panel{
+    background:var(--navy);color:#fff;border-radius:12px;padding:10px 14px;
+    display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden;
+    min-height:38mm;
+  }
+  .comm-panel::before{
+    content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,169,228,.25),transparent 65%);
+  }
+  .comm-panel h3{font-size:11pt;font-weight:800;letter-spacing:-.025em;color:#fff;position:relative;z-index:1;line-height:1.25;}
+  .comm-copy{font-size:8.5pt;color:#C8D3E7;line-height:1.5;position:relative;z-index:1;}
+  .comm-copy b{color:#fff;font-weight:600;}
+  .comm-panel .tag{background:rgba(255,255,255,.09);color:#EAF6FD;position:relative;z-index:1;}
+  .comm-panel .tag.hot{background:var(--blue);color:#fff;font-weight:700;padding:4px 10px;font-size:8pt;letter-spacing:.02em;}
+  .comm-panel .tag-row{position:relative;z-index:1;}
+  .comm-panel .ev{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:6px;padding:4px 8px;
+    display:flex;align-items:center;gap:6px;
+    letter-spacing:-.015em;white-space:nowrap;
+  }
+  .comm-panel .ev-k{
+    font-size:6pt;font-weight:800;color:var(--blue);
+    letter-spacing:.12em;text-transform:uppercase;flex-shrink:0;
+  }
+  .comm-panel .ev-v{
+    font-size:7.5pt;font-weight:700;color:#fff;
+  }
+  .comm-photo{
+    border-radius:12px;min-height:24mm;
+    background-image:url('assets/photo-community.jpg');background-size:cover;background-position:center 30%;
+  }
+
+  /* 1:1 promo mini row */
+  .oneon-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:10px;align-items:stretch;}
+  .oneon-photo{
+    border-radius:12px;min-height:42mm;
+    background-image:url('assets/photo-1on1.jpg');
+    background-size:cover;background-position:center 25%;
+  }
+  .oneon-info{
+    background:#F7FAFF;border:1px solid #E1E9F5;border-radius:12px;padding:10px 14px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .oneon-info h3{font-size:12pt;font-weight:800;color:var(--navy);letter-spacing:-.025em;}
+  .oneon-info p{font-size:9pt;color:var(--muted);line-height:1.55;}
+  .oneon-info p b{color:var(--navy);font-weight:700;}
+  .oneon-info .tag-row{margin-top:2px;}
+  .oneon-cats{
+    display:flex;flex-direction:column;gap:4px;margin-top:auto;
+    padding-top:7px;border-top:1px dashed #D5E0EE;
+  }
+  .oneon-cats .cat-row{
+    display:grid;grid-template-columns:58px 1fr;gap:8px;align-items:center;
+  }
+  .oneon-cats .cat-k{
+    font-size:6.5pt;font-weight:800;color:var(--blue-deep);
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  .oneon-cats .cat-tags{display:flex;flex-wrap:wrap;gap:3px;}
+  .oneon-cats .cat-tags span{
+    font-size:7.5pt;font-weight:600;color:var(--navy);
+    background:#fff;border:1px solid #E1E9F5;
+    border-radius:4px;padding:2px 7px;letter-spacing:-.015em;white-space:nowrap;
+  }
+  .oneon-cats .cat-tags span.hot{background:var(--tint);color:var(--blue-deep);font-weight:700;border-color:transparent;}
+
+  /* Location */
+  .loc{
+    display:grid;grid-template-columns:1fr 1.1fr;gap:10px;align-items:stretch;
+  }
+  .loc-info{
+    background:var(--navy);color:#fff;border-radius:12px;padding:11px 15px;
+    display:flex;flex-direction:column;gap:5px;position:relative;overflow:hidden;
+  }
+  .loc-info::after{
+    content:"";position:absolute;right:-30mm;bottom:-30mm;width:80mm;height:80mm;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,169,228,.22),transparent 60%);
+  }
+  .loc-kicker{font-size:8pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);position:relative;z-index:1;}
+  .loc-title{font-size:13.5pt;font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.2;position:relative;z-index:1;}
+  .loc-title .hi{color:var(--blue);}
+  .loc-address{font-size:9pt;color:#C8D3E7;font-weight:500;line-height:1.5;position:relative;z-index:1;}
+  .loc-address b{color:#fff;font-weight:700;}
+  .loc-meta{display:flex;gap:16px;position:relative;z-index:1;padding-top:6px;border-top:1px dashed rgba(255,255,255,.18);margin-top:auto;}
+  .loc-meta .m{display:flex;flex-direction:column;gap:0;}
+  .loc-meta .m .n{font-size:18pt;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;}
+  .loc-meta .m .n .u{font-size:10pt;color:var(--blue);margin-left:1px;}
+  .loc-meta .m .l{font-size:8pt;color:#8FA7CE;font-weight:500;margin-top:3px;}
+
+  .loc-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .loc-photos .photo{min-height:0;height:100%;border-radius:12px;}
+  .loc-photos .photo.map{background-image:url('assets/map-marked.png');background-size:cover;background-position:center 35%;}
+  .loc-photos .photo.park{background-image:url('assets/photo-parking.jpg');background-size:cover;background-position:center 55%;}
+  .loc-photos .photo.map .photo-cap{top:8px;bottom:auto;background:rgba(255,255,255,.95);color:var(--navy);}
+  .loc-photos .photo.map .photo-cap .k{color:var(--blue-deep);}
+
+  /* Footer (page 2) */
+  .footer{
+    margin-top:auto;background:var(--navy);color:#fff;padding:3mm 12mm 3mm 12mm;
+    display:grid;grid-template-columns:1.35fr 1fr auto;gap:14px;align-items:center;position:relative;
+  }
+  .foot-copy{display:flex;flex-direction:column;gap:5px;}
+  .foot-copy .pre{font-size:9pt;color:#B7C4DB;font-weight:500;letter-spacing:-.01em;line-height:1.4;}
+  .foot-copy .pre b{color:#fff;font-weight:700;}
+  .foot-copy .brand2{display:flex;align-items:baseline;gap:0;font-weight:800;letter-spacing:-.02em;}
+  .foot-copy .brand2 .m{color:var(--blue);font-size:16pt;}
+  .foot-copy .brand2 .lg{color:var(--blue);font-size:16pt;}
+  .foot-copy .brand2 .club{color:#B7C4DB;font-size:8pt;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-left:4px;}
+
+  .foot-info{display:flex;flex-direction:column;gap:7px;font-size:8.5pt;color:#C8D3E7;}
+  .foot-info .row{display:flex;gap:6px;align-items:baseline;}
+  .foot-info .row .k{color:#8FA7CE;font-weight:700;font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;width:22mm;flex-shrink:0;}
+  .foot-info .row .v{color:#fff;font-weight:500;letter-spacing:-.01em;}
+  .foot-info .row .v.phone{font-weight:800;font-size:12pt;letter-spacing:-.02em;}
+
+  .qr-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;}
+  .qr-wrap img{width:18mm;height:18mm;border-radius:6px;background:#fff;padding:2px;display:block;}
+  .qr-wrap span{font-size:7pt;color:#8FA7CE;letter-spacing:.14em;text-transform:uppercase;font-weight:700;}
+</style>
+</head>
+<body>
+
+  <!-- ============================================================ PAGE 1 -->
+  <div class="page">
+    <header class="header">
+      <div class="brandrow">
+        <div class="label">
+          <span class="dot"></span>
+          <span class="em">재직 임직원</span>
+          <span>특별 우대혜택</span>
+        </div>
+        <div class="brand">
+          <span class="m">Mal</span><span class="lg">Lang</span><span class="club">Lingo Club</span>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-text">
+          <h1 class="headline"><span class="hi">영어,</span> 마음먹은 <span class="hi">오늘</span>이<br/>가장 빠른 날입니다.</h1>
+          <p class="subcopy"><b>왕초보부터 Business English까지,</b><br/>실제로 말하고 사용하는 영어를 배웁니다.</p>
+        </div>
+        <div class="hero-photo"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- BENEFITS -->
+      <section class="benefits">
+        <div class="benefits-top">
+          <div class="benefits-title">
+            재직 임직원 전용 우대혜택
+            <small>사원증 · 재직확인 시 즉시 적용</small>
+          </div>
+          <span class="benefits-stamp"><span class="k">●</span> 사내 협약 혜택</span>
+        </div>
+
+        <div class="sec-head" style="margin-bottom:1.5mm;">
+          <div class="sec-title"><span class="accent">GROUP STUDY</span> · 정규 그룹수업</div>
+          <div class="sec-note">6·12개월 수강권 대상</div>
+        </div>
+        <div class="group-grid">
+          <div class="b-card">
+            <div class="lhs">
+              <span class="cat">6개월 수강권</span>
+              <span class="name">Group Study Pass</span>
+            </div>
+            <div class="num">10<span class="u">% OFF</span></div>
+          </div>
+          <div class="b-card">
+            <div class="lhs">
+              <span class="cat">12개월 수강권</span>
+              <span class="name">Group Study Pass</span>
+            </div>
+            <div class="num">10<span class="u">% OFF</span></div>
+          </div>
+        </div>
+
+        <div class="sec-head" style="margin-top:2mm;margin-bottom:1.5mm;">
+          <div class="sec-title"><span class="accent">NATIVE 1:1 CLINIC</span> · 원어민 1:1 클리닉</div>
+          <div class="sec-note">결제 회차 + 보너스 회차 제공</div>
+        </div>
+        <div class="clinic-grid">
+          <div class="c-card">
+            <div>
+              <div class="cat">20회 결제 시</div>
+              <div class="sumline">총 <b>25회</b> 수강 가능</div>
+            </div>
+            <div class="bonus-block">
+              <span class="bonus-label">Bonus</span>
+              <span class="bonus-num"><span class="plus">+</span>5<span class="u">회</span></span>
+              <div class="bonus-sub">추가 제공</div>
+            </div>
+          </div>
+          <div class="c-card">
+            <div>
+              <div class="cat">50회 결제 시</div>
+              <div class="sumline">총 <b>70회</b> 수강 가능</div>
+            </div>
+            <div class="bonus-block">
+              <span class="bonus-label">Bonus</span>
+              <span class="bonus-num"><span class="plus">+</span>20<span class="u">회</span></span>
+              <div class="bonus-sub">추가 제공</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRICULUM -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">말랑링고에서는 <span class="accent">이렇게</span> 배울 수 있습니다</div>
+          <div class="sec-kicker">How we teach</div>
+        </div>
+
+        <div class="curr-with-photo" style="margin-bottom:8px;">
+          <div style="display:grid;grid-template-rows:auto auto;gap:8px;align-content:start;">
+            <div class="cur-card">
+              <div class="head"><span class="num-badge">01</span><h4>왕초보부터 영어토론까지, <span class="hi">5단계 전 레벨</span> 운영</h4></div>
+              <div class="lvl">
+                <span>Beginner</span><span class="arrow">→</span>
+                <span>Basic</span><span class="arrow">→</span>
+                <span>Pre-Int.</span><span class="arrow">→</span>
+                <span>Intermediate</span><span class="arrow">→</span>
+                <span>Advanced</span>
+              </div>
+              <p>영어를 처음 시작하는 <b>왕초보</b>부터 자유롭게 <b>영어토론</b>이 가능한 고급 학습자까지, <b>세분화된 5단계 레벨</b>로 <b>누구나</b> 자신의 실력에 맞게 시작할 수 있습니다.</p>
+            </div>
+            <div class="cur-card">
+              <div class="head"><span class="num-badge">02</span><h4><span class="hi">체계적인 자체 커리큘럼</span></h4></div>
+              <div class="curr-flow">
+                <span class="fl-item">
+                  <span class="fl-lvl">Beginner · Basic</span>
+                  <b>Listening Workbook</b>
+                  <em>리스닝 실력 향상</em>
+                </span>
+                <span class="fl-arrow">→</span>
+                <span class="fl-item">
+                  <span class="fl-lvl">Intermediate</span>
+                  <b>Conversation Workbook</b>
+                  <em>프리토킹 훈련</em>
+                </span>
+                <span class="fl-arrow">→</span>
+                <span class="fl-item">
+                  <span class="fl-lvl">Advanced</span>
+                  <b>English Newspaper</b>
+                  <em>심도 깊은 영어토론</em>
+                </span>
+              </div>
+              <p class="curr-note"><b>단계별 맞춤 교재</b>로 진행되며, <b>새로운 콘텐츠가 지속적으로 갱신</b>됩니다.</p>
+            </div>
+          </div>
+          <div class="curr-photo">
+            <div class="cap"><span class="k">Group</span>실제 그룹수업 현장</div>
+          </div>
+        </div>
+
+        <div class="curr-wrap">
+          <div class="cur-card">
+            <div class="head">
+              <span class="num-badge">03</span>
+              <h4>원어민 <span class="hi">1:1 클리닉 수업</span></h4>
+              <div class="spec-badges">
+                <span class="spec"><b>20분</b>/회</span>
+                <span class="spec"><b>매회</b> 맞춤 피드백</span>
+              </div>
+            </div>
+            <div class="clinic-body">
+              <div class="clinic-course">
+                <div class="cl-col">
+                  <span class="cl-cat">Speaking</span>
+                  <div class="cl-tags">
+                    <span>프리토킹</span><span>테마 롤플레잉</span>
+                  </div>
+                </div>
+                <div class="cl-col">
+                  <span class="cl-cat">Content</span>
+                  <div class="cl-tags">
+                    <span>교재 기반</span><span>아티클</span><span>비즈니스</span>
+                  </div>
+                </div>
+                <div class="cl-col">
+                  <span class="cl-cat">Test Prep</span>
+                  <div class="cl-tags">
+                    <span class="hot">토익스피킹</span><span class="hot">OPIc</span>
+                  </div>
+                </div>
+              </div>
+              <div class="clinic-summary">
+                <p><b>체계적으로 설계된 코스</b>가<br/>전 영역을 커버해<br/><b>지루할 틈 없이</b> 진행됩니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cur-card">
+            <div class="head"><span class="num-badge">04</span><h4><span class="hi">Business &amp; Professional</span> English</h4></div>
+            <div class="clinic-course" style="margin-top:2px;">
+              <div class="cl-col">
+                <span class="cl-cat">Work</span>
+                <div class="cl-tags">
+                  <span>PPT</span><span>이메일</span><span>스크립트</span><span>인터뷰</span>
+                </div>
+              </div>
+              <div class="cl-col">
+                <span class="cl-cat">Exam</span>
+                <div class="cl-tags">
+                  <span class="hot">SPA</span><span class="hot">IELTS</span><span>Academic Writing</span>
+                </div>
+              </div>
+            </div>
+            <p class="curr-note"><b>실무 자료 기반</b> 맞춤 수업 · <b>대기업 영어시험</b> 대비</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADDITIONAL BENEFITS -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">이런 혜택도 <span class="accent">함께</span> 제공됩니다</div>
+          <div class="sec-kicker">Extra Benefits</div>
+        </div>
+        <div class="add-grid">
+          <div class="a-card highlight">
+            <div class="badge-row">
+              <span class="badge">OPIc</span>
+              <span class="sep">›</span>
+              <span class="title-inline">응시료 할인</span>
+            </div>
+            <div class="mega">15<span class="u">% OFF</span></div>
+          </div>
+          <div class="a-card">
+            <span class="badge">Certificate</span>
+            <h5>수료증 발급</h5>
+            <p><b>6개월 과정</b> 이수 시<br/>자체 수료증 제공</p>
+          </div>
+          <div class="a-card partner">
+            <span class="badge">Official Partner</span>
+            <h5>Ulsan Online 공식 파트너</h5>
+            <p><b>울산 최대 외국인 커뮤니티</b> 공식 협력<br/><b>외국인 교류 이벤트</b> 공동 운영</p>
+            <div class="pmark"><span class="brand-ul">Ulsan Online</span> × MalLangLingo</div>
+          </div>
+          <div class="a-card">
+            <span class="badge">Local Network</span>
+            <h5>지역 협력 네트워크</h5>
+            <div class="netlist">
+              <span>뮤즐리 음악학원</span><span>드오브 필라테스</span><span>화이트e치과</span>
+              <span>원어민·전문가 One-Day Class</span><span>교육·문화 프로그램</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- ============================================================ PAGE 2 -->
+  <div class="page">
+    <header class="page2-head">
+      <div class="brandrow">
+        <div class="label">
+          <span class="dot"></span>
+          <span class="em">재직 임직원</span>
+          <span>특별 우대혜택</span>
+        </div>
+        <div class="brand" style="color:var(--navy);">
+          <span class="m">Mal</span><span class="lg">Lang</span><span class="club" style="color:var(--muted);">Lingo Club</span>
+        </div>
+      </div>
+      <h2>수업만 듣고 가는 곳이 아닙니다.<br/><span class="hi">120평 라운지 · 실제 외국인과의 일상</span></h2>
+      <p class="sub"><b>공부하는 공간, 대화하는 공간, 쉬는 공간</b>이 모두 한 곳에 있습니다.</p>
+    </header>
+
+    <main>
+      <!-- SPACE -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">120평 <span class="accent">스터디 라운지</span></div>
+          <div class="sec-kicker">Study Lounge</div>
+        </div>
+        <div class="space-hero-grid">
+          <div class="space-info">
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;">
+              <div class="space-num">120<span class="u">평</span></div>
+              <div>
+                <h3 style="margin-bottom:4px;">수업 전후에도 자유롭게 이용</h3>
+                <div class="space-copy" style="padding-bottom:0;">회원은 <b>운영시간 동안</b> 공간을 자유롭게 이용할 수 있습니다.</div>
+                <div class="tag-row" style="margin-top:6px;">
+                  <span class="tag">개인 공부</span><span class="tag">과제</span>
+                  <span class="tag">OPIc·IELTS 준비</span><span class="tag">독서</span>
+                  <span class="tag">노트북 업무</span>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px;font-size:10pt;color:var(--muted);border-left:1px dashed var(--line);padding-left:18px;letter-spacing:-.015em;">
+                <span><b style="color:var(--navy);font-weight:800;">월–목</b> 10:00 – 22:00</span>
+                <span><b style="color:var(--navy);font-weight:800;">토–일</b> 10:00 – 14:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-photos-row">
+            <div class="photo a"><div class="photo-cap"><span class="k">Lounge</span>스터디 라운지</div></div>
+            <div class="photo b"><div class="photo-cap"><span class="k">Café Zone</span>카페존</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NATIVE 1:1 SNAPSHOT -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">원어민 <span class="accent">1:1 클리닉</span> 이렇게 진행됩니다</div>
+          <div class="sec-kicker">Native 1:1</div>
+        </div>
+        <div class="oneon-wrap">
+          <div class="oneon-photo"><div class="photo-cap"><span class="k">1:1</span>실제 1:1 클리닉</div></div>
+          <div class="oneon-info">
+            <h3>목적에 맞춘 맞춤형 수업</h3>
+            <p>원어민 강사가 회원 목적에 맞춰 <b>수업 스크립트를 준비</b>합니다.<br/>시험 대비, 인터뷰, 업무 자료 리뷰까지 <b>모두 1:1로 진행</b>됩니다.</p>
+            <div class="oneon-cats">
+              <div class="cat-row">
+                <span class="cat-k">Speaking</span>
+                <div class="cat-tags"><span>Free Talking</span><span>테마 롤플레잉</span><span>Article</span></div>
+              </div>
+              <div class="cat-row">
+                <span class="cat-k">Test Prep</span>
+                <div class="cat-tags"><span class="hot">OPIc</span><span class="hot">토익스피킹</span><span class="hot">IELTS</span></div>
+              </div>
+              <div class="cat-row">
+                <span class="cat-k">Business</span>
+                <div class="cat-tags"><span>Interview</span><span>Presentation</span><span>Writing</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMUNITY (축소) -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">외국에 가지 않아도 <span class="accent">외국인과 만나는 날</span></div>
+          <div class="sec-kicker">Community</div>
+        </div>
+        <div class="comm-wrap">
+          <div class="comm-panel">
+            <div style="display:flex;flex-direction:column;gap:4px;position:relative;z-index:1;">
+              <span class="tag hot" style="align-self:flex-start;">외국인 상주 · 상시 교류</span>
+              <h3>배운 영어, 실전에서 써보세요</h3>
+              <p class="comm-copy"><b>다양한 국적의 친구들</b>과 대화할 수 있는 <b>정기 이벤트</b>가 열립니다.</p>
+            </div>
+            <div class="comm-events" style="position:relative;z-index:1;margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:5px;">
+              <div class="ev"><span class="ev-k">Weekly</span><span class="ev-v">Language Exchange</span></div>
+              <div class="ev"><span class="ev-k">Weekly</span><span class="ev-v">Coffee Meetup</span></div>
+              <div class="ev"><span class="ev-k">Seasonal</span><span class="ev-v">Holiday Party</span></div>
+              <div class="ev"><span class="ev-k">Monthly</span><span class="ev-v">One-Day Class</span></div>
+            </div>
+          </div>
+          <div class="comm-photos">
+            <div class="photo a"><div class="photo-cap"><span class="k">Meetup</span>커뮤니티 모임</div></div>
+            <div class="photo b"><div class="photo-cap"><span class="k">Event</span>Cultural Exchange</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section>
+        <div class="sec-head">
+          <div class="sec-title">울산 <span class="accent">삼산 중심생활권</span>, 이 위치입니다</div>
+          <div class="sec-kicker">Location · Access</div>
+        </div>
+        <div class="loc">
+          <div class="loc-info">
+            <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:8px;">
+              <span class="loc-kicker">Location · Access</span>
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+                <div style="display:flex;flex-direction:column;gap:6px;flex:1;">
+                  <div class="loc-title">울산 <span class="hi">삼산 중심생활권</span></div>
+                  <p class="loc-address"><b>울산광역시 남구 삼산중로 36, 2층</b><br/><span style="font-size:8pt;color:#8FA7CE;">주차장 : 삼산동 1475-7</span><br/>롯데백화점 · 현대백화점 도보 거리<br/>울산고속버스터미널 인접</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;padding-left:14px;border-left:1px dashed rgba(255,255,255,.18);align-items:center;text-align:center;">
+                  <div class="m" style="display:flex;flex-direction:column;align-items:center;"><div class="n" style="font-size:20pt;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;">약 40<span class="u" style="font-size:11pt;color:var(--blue);margin-left:1px;">대</span></div><div class="l" style="font-size:8pt;color:#8FA7CE;font-weight:500;margin-top:3px;">전용 주차</div></div>
+                  <div class="m" style="display:flex;flex-direction:column;align-items:center;"><div class="n" style="font-size:20pt;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1;">3<span class="u" style="font-size:11pt;color:var(--blue);margin-left:1px;">분</span></div><div class="l" style="font-size:8pt;color:#8FA7CE;font-weight:500;margin-top:3px;">백화점 도보</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loc-photos">
+            <div class="photo map"><div class="photo-cap"><span class="k">Map</span>말랑링고 위치</div></div>
+            <div class="photo park"><div class="photo-cap"><span class="k">Parking</span>약 40대 주차</div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="foot-copy">
+        <p class="pre">영어를 <b>공부하러 왔다가</b>,<br/>영어로 <b>대화하는 일상이 시작되는 곳</b>.</p>
+        <div class="brand2">
+          <span class="m">Mal</span><span class="lg">Lang</span><span class="club">Lingo Club</span>
+        </div>
+      </div>
+      <div class="foot-info">
+        <div class="row"><span class="k">Tel</span><span class="v phone">052-256-0504</span></div>
+        <div class="row"><span class="k">Address</span><span class="v">울산광역시 삼산중로 36 2층</span></div>
+        <div class="row"><span class="k">Instagram</span><span class="v">@mallang_lingo</span></div>
+      </div>
+      <div class="qr-wrap">
+        <img src="assets/qr.png" alt="QR" />
+        <span>Scan</span>
+      </div>
+    </footer>
+
+  </div>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
