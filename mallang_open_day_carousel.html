@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, user-scalable=yes">
+    <title>MALLANG OPEN DAY Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+KR:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mal-forest': '#1A3626',
+                        'mal-ivory': '#F7F5F0',
+                        'mal-tangerine': '#E86A33',
+                        'mal-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'sans': ['"Noto Sans KR"', 'sans-serif'],
+                        'serif': ['"Bodoni Moda"', 'serif'],
+                        'display': ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            word-break: keep-all;
+            overflow-wrap: normal;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .slide-container {
+            width: 1080px;
+            height: 1350px;
+            overflow: hidden;
+            position: relative;
+            background-color: #F7F5F0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .safe-padding {
+            padding: 75px 70px 90px 70px; 
+        }
+
+        .text-stroke-light {
+            -webkit-text-stroke: 2px rgba(247, 245, 240, 0.95); 
+            paint-order: stroke fill;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        @media print {
+            @page { size: 1080px 1350px; margin: 0; }
+            body { background-color: #ffffff; gap: 0 !important; padding: 0 !important; margin: 0 !important; }
+            .slide-container { box-shadow: none !important; page-break-after: always; page-break-inside: avoid; margin: 0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: Campaign Hero - LOCK -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding justify-between">
+        <div class="absolute inset-0 z-0">
+            <img src="학원 내부 사진(입구 앞쪽).jpg" alt="Mallang Space" class="w-full h-full object-cover object-center opacity-40 mix-blend-multiply grayscale-[20%]">
+            <div class="absolute inset-0 bg-gradient-to-b from-mal-forest/90 via-mal-forest/70 to-mal-forest/95"></div>
+        </div>
+        <div class="z-10 mt-4 shrink-0">
+            <h1 class="text-[120px] font-black leading-[1.05] tracking-tighter text-mal-ivory drop-shadow-2xl shadow-black">
+                삼산에서<br>
+                잠깐 머물 곳이<br>
+                <span class="text-mal-tangerine">필요하세요?</span>
+            </h1>
+        </div>
+        <div class="z-10 flex flex-col gap-[35px] mb-2 shrink-0 mt-auto">
+            <div class="border-l-[10px] border-mal-tangerine pl-[30px]">
+                <p class="text-[64px] font-black leading-tight tracking-tight text-white drop-shadow-lg shadow-black/60">
+                    필요한 만큼 머물다 가세요.
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="font-serif text-[56px] leading-none tracking-tighter uppercase font-black text-white/95">
+                    MALLANG OPEN DAY
+                </p>
+                <p class="text-[36px] font-bold text-white/80 mt-1">
+                    목요일과 토요일, 말랑의 문을 조금 더 열어둡니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: Moments in Samsan - LOCK -->
+    <div class="slide-container bg-mal-ivory relative">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="학원 내부 사진(앞쪽 창가).jpg" alt="Mallang Space Window View" class="w-full h-full object-cover object-center opacity-[0.16] mix-blend-multiply">
+        </div>
+        <div class="relative z-10 w-full h-full safe-padding flex flex-col">
+            <header class="border-b-[5px] border-mal-forest pb-4 mb-12 inline-block self-start shrink-0">
+                <h2 class="text-[68px] font-black leading-[1.1] tracking-tight text-mal-forest">
+                    삼산에서 잠깐<br>머물 곳이 필요한 순간,
+                </h2>
+                <p class="text-[42px] font-bold text-mal-tangerine mt-2">말랑을 떠올려주세요.</p>
+            </header>
+            <div class="relative flex-grow w-full">
+                <div class="absolute top-0 left-0 flex flex-col items-start">
+                    <p class="text-[34px] font-bold text-mal-charcoal/80 mb-[-8px] z-10 text-stroke-light">과제할 곳이 필요한</p>
+                    <p class="text-[70px] font-black tracking-tight text-mal-forest text-stroke-light">대학생</p>
+                </div>
+                <div class="absolute top-[170px] right-0 flex flex-col items-end text-right">
+                    <p class="text-[34px] font-bold text-mal-charcoal/90 mb-[-8px] z-10 text-stroke-light">미팅 전 시간이 뜬</p>
+                    <p class="text-[70px] font-black tracking-tight text-mal-forest text-stroke-light">직장인</p>
+                </div>
+                <div class="absolute top-[430px] left-[50%] transform -translate-x-1/2 flex flex-col items-center text-center w-full">
+                    <p class="text-[38px] font-bold text-mal-charcoal/90 mb-[-12px] z-10 text-stroke-light">약속 사이 시간이 애매한</p>
+                    <p class="text-[130px] font-black tracking-tighter text-mal-tangerine text-stroke-light drop-shadow-sm">누구나</p>
+                </div>
+                <div class="absolute bottom-[140px] left-0 flex flex-col items-start">
+                    <p class="text-[34px] font-bold text-mal-charcoal/90 mb-[-8px] z-10 text-stroke-light">아이 픽업을 기다리는</p>
+                    <p class="text-[70px] font-black tracking-tight text-mal-forest text-stroke-light">학부모</p>
+                </div>
+                <div class="absolute bottom-[10px] right-0 flex flex-col items-end text-right">
+                    <p class="text-[34px] font-bold text-mal-charcoal/90 mb-[-8px] z-10 text-stroke-light">잠시 쉬어갈 곳이 필요한</p>
+                    <p class="text-[70px] font-black tracking-tight text-mal-forest text-stroke-light">외국인</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: A Little Hospitality - LOCK -->
+    <div class="slide-container bg-mal-ivory safe-padding flex flex-col">
+        <header class="w-full shrink-0 mb-8 inline-block self-start">
+            <h2 class="font-serif text-[85px] uppercase tracking-tighter text-mal-tangerine font-black leading-[1.0] border-b-[5px] border-mal-tangerine pb-3 inline-block">
+                A LITTLE<br>HOSPITALITY.
+            </h2>
+        </header>
+
+        <div class="w-full h-[400px] shrink-0 relative z-10 overflow-hidden border-[4px] border-mal-forest/10 mb-10 shadow-sm">
+            <img src="학원 내부 사진(뒤쪽 다른 각도).jpg" alt="Mallang Hospitality Space" class="w-full h-full object-cover object-center">
+        </div>
+
+        <div class="w-full grid grid-cols-2 gap-y-10 gap-x-6 px-4 mb-auto shrink-0">
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">COFFEE</p>
+                <p class="text-[36px] font-bold text-mal-charcoal/80 leading-none">음료 1~2잔</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">SNACKS</p>
+                <p class="text-[36px] font-bold text-mal-charcoal/80 leading-none">간단한 간식</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">WI-FI</p>
+                <p class="text-[36px] font-bold text-mal-charcoal/80 leading-none">빠른 인터넷</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">A SEAT</p>
+                <p class="text-[36px] font-bold text-mal-charcoal/80 leading-none">편안한 좌석</p>
+            </div>
+        </div>
+        
+        <div class="w-full flex flex-col items-center text-center mt-10 shrink-0">
+            <h3 class="text-[52px] font-black leading-[1.15] tracking-tight text-mal-forest mb-5">
+                그냥 오세요.<br>
+                작은 환대는 저희가 준비할게요.
+            </h3>
+            <div class="border-t-[3px] border-mal-forest/20 pt-4 w-full">
+                <p class="text-[34px] font-bold text-mal-charcoal/80 leading-tight">
+                    말랑을 찾아주신 분들을 위한 작은 환대입니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: No Sales Pressure - LOCK -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding flex flex-col">
+        <div class="shrink-0 mb-[35px]">
+            <h2 class="font-display text-[155px] leading-[0.88] tracking-tighter uppercase font-black text-mal-tangerine">
+                NO<br>SALES<br>PRESSURE.
+            </h2>
+        </div>
+        <div class="shrink-0 mb-[40px]">
+            <p class="text-[60px] font-bold tracking-tight text-mal-ivory border-l-[10px] border-mal-tangerine pl-5 leading-snug">
+                공간만 이용하고<br>가셔도 됩니다.
+            </p>
+        </div>
+        <div class="flex flex-col gap-[28px] pl-[30px] shrink-0">
+            <div class="flex flex-col">
+                <p class="font-serif text-[36px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-1">NO SALES TALK.</p>
+                <p class="text-[38px] font-medium text-mal-ivory/95 leading-none">상담을 먼저 권하지 않습니다.</p>
+            </div>
+            <div class="flex flex-col">
+                <p class="font-serif text-[36px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-1">NO PRESSURE.</p>
+                <p class="text-[38px] font-medium text-mal-ivory/95 leading-none">등록을 권하지 않습니다.</p>
+            </div>
+            <div class="flex flex-col">
+                <p class="font-serif text-[36px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-1">NO CONTACT.</p>
+                <p class="text-[38px] font-medium text-mal-ivory/95 leading-none">연락처를 남기실 필요 없습니다.</p>
+            </div>
+        </div>
+        <div class="mt-auto shrink-0 border-t-[3px] border-mal-tangerine pt-6 w-full">
+            <p class="text-[44px] font-bold text-mal-ivory leading-snug">
+                말랑이 궁금해질 때만<br>먼저 말씀해주세요.
+            </p>
+        </div>
+    </div>
+
+    <!-- PAGE 5: How To Visit - LOCK -->
+    <div class="slide-container bg-mal-ivory relative overflow-hidden flex flex-col justify-center items-center safe-padding">
+        <div class="absolute inset-0 z-0 opacity-[0.12] grayscale mix-blend-multiply">
+            <img src="학원 내부 사진(뒤쪽).jpg" alt="Mallang Space" class="w-full h-full object-cover object-center">
+        </div>
+
+        <div class="z-10 flex flex-col items-center justify-center w-full relative h-full">
+            <p class="text-[54px] font-bold text-mal-charcoal mb-[35px] shrink-0">그냥 오셔서</p>
+            
+            <div class="bg-mal-tangerine w-[120%] -ml-[10%] transform -rotate-[2.5deg] py-[60px] flex flex-col items-center justify-center shadow-sm shrink-0 mb-[35px]">
+                <p class="font-black text-mal-ivory text-[140px] leading-[1.1] tracking-tight">OPEN DAY</p>
+                <p class="font-black text-mal-ivory text-[140px] leading-[1.1] tracking-tight">이용하러</p>
+                <p class="font-black text-mal-ivory text-[140px] leading-[1.1] tracking-tight drop-shadow-sm">왔어요.</p>
+            </div>
+            
+            <p class="text-[54px] font-bold text-mal-charcoal shrink-0">라고 말씀해주세요.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 6: TIME / LOCATION / PARKING -->
+    <div class="slide-container bg-mal-ivory text-mal-charcoal safe-padding flex flex-col justify-center">
+        <div class="w-full flex flex-col mt-[15px]">
+            
+            <!-- 1. Header & OPEN HOURS -->
+            <div class="flex justify-between items-end w-full shrink-0 border-b-[5px] border-mal-forest pb-3">
+                <h2 class="text-[86px] font-black leading-none tracking-tight text-mal-forest uppercase">FIND US.</h2>
+                <div class="flex flex-col items-end mb-1">
+                    <p class="font-serif text-[24px] font-bold text-mal-charcoal/50 mb-2 tracking-wide uppercase">OPEN HOURS</p>
+                    <div class="grid grid-cols-[110px_auto] gap-x-[18px] gap-y-2 items-baseline text-left">
+                        <p class="text-[34px] font-black text-mal-tangerine leading-none text-right">목요일</p>
+                        <p class="text-[42px] font-black text-mal-charcoal leading-none tracking-tight">오전 10시 ~ 오후 10시</p>
+                        
+                        <p class="text-[34px] font-black text-mal-tangerine leading-none text-right">토요일</p>
+                        <p class="text-[42px] font-black text-mal-charcoal leading-none tracking-tight">오전 10시 ~ 오후 2시</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. LOCATION / PARKING Split Image Grid -->
+            <div class="flex w-full gap-5 mt-[45px] h-[520px] shrink-0">
+                <!-- MAP -->
+                <div class="w-[58%] h-full bg-white border-[3px] border-mal-charcoal/10 flex items-center justify-center p-2">
+                    <img src="말랑링고 지도.jpg" alt="Map Location" class="w-full h-full object-contain">
+                </div>
+                <!-- PARKING -->
+                <div class="w-[42%] h-full border-[3px] border-mal-charcoal/10 overflow-hidden">
+                    <img src="주차장 전경.jpg" alt="Parking Lot" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
+            <!-- 3. LOCATION / PARKING Info Text -->
+            <div class="flex w-full gap-5 mt-[25px] shrink-0">
+                <!-- ADDRESS -->
+                <div class="w-[58%] flex flex-col px-1">
+                    <p class="font-serif text-[22px] font-bold text-mal-charcoal/50 mb-1 tracking-wide uppercase">LOCATION</p>
+                    <p class="text-[38px] font-black text-mal-charcoal leading-none tracking-tight">울산 남구 삼산중로 36 2층</p>
+                </div>
+                <!-- PARKING INFO -->
+                <div class="w-[42%] flex flex-col px-1">
+                    <p class="font-serif text-[22px] font-bold text-mal-charcoal/50 mb-1 tracking-wide uppercase">PARKING</p>
+                    <p class="text-[36px] font-bold text-mal-charcoal leading-tight tracking-tight">건물 뒤편 무료 주차<br>약 40대 가능</p>
+                </div>
+            </div>
+
+            <!-- 4. Community Statement (New) -->
+            <div class="flex flex-col mt-[45px] pt-[25px] border-t-[2px] border-mal-tangerine shrink-0 w-full mb-2">
+                <p class="text-[36px] font-bold text-mal-forest leading-tight mb-[8px]">
+                    우리가 가진 공간을, 지역사회와 함께 나눕니다.
+                </p>
+                <p class="text-[27px] font-medium text-mal-charcoal/80 leading-snug tracking-tight break-keep">
+                    더 편하게 머물고, 더 자연스럽게 연결되는 동네를 만들고 싶습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: Share The Day -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding flex flex-col items-center justify-center">
+        <div class="w-full flex flex-col items-center mt-[30px]">
+            
+            <!-- Header -->
+            <div class="border-b-[5px] border-mal-tangerine pb-4 w-full shrink-0">
+                <h2 class="font-serif text-[80px] uppercase tracking-tighter text-mal-tangerine font-black leading-none">
+                    SHARE THE DAY.
+                </h2>
+            </div>
+
+            <!-- WRITE / OR / SHARE -->
+            <div class="flex items-start justify-between w-full shrink-0 relative mt-[50px]">
+                <div class="flex flex-col w-[43%] items-start text-left">
+                    <p class="font-serif text-[42px] font-bold text-mal-tangerine leading-none mb-3 tracking-wide">01 WRITE</p>
+                    <p class="text-[36px] font-bold leading-snug">OPEN DAY<br>후기 작성</p>
+                </div>
+                
+                <div class="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2 font-serif text-[34px] italic text-mal-ivory/50 font-bold">
+                    OR
+                </div>
+                
+                <div class="flex flex-col w-[43%] items-end text-right">
+                    <p class="font-serif text-[42px] font-bold text-mal-tangerine leading-none mb-3 tracking-wide">02 SHARE</p>
+                    <p class="text-[36px] font-bold leading-snug">공식 게시물<br>공유 / 리포스트</p>
+                </div>
+            </div>
+
+            <!-- Flow connection -->
+            <p class="text-[40px] font-bold text-mal-ivory text-center shrink-0 w-full mt-[45px]">
+                캡처 또는 링크를 준비해서
+            </p>
+
+            <!-- Instagram DM CTA -->
+            <div class="flex flex-col items-center shrink-0 mt-[35px]">
+                <p class="text-[100px] font-black tracking-tight text-mal-tangerine leading-none drop-shadow-sm">Instagram DM</p>
+                <p class="text-[52px] font-bold text-mal-ivory leading-none mt-[32px]">으로 보내주세요.</p>
+            </div>
+            
+            <!-- Reward -->
+            <div class="bg-mal-ivory py-5 px-10 shrink-0 text-center mt-[45px] rounded-full">
+                <p class="text-[36px] font-bold text-mal-charcoal leading-snug">
+                    참여자 중 추첨을 통해<br>소정의 선물을 드립니다.
+                </p>
+            </div>
+
+            <!-- Review Message -->
+            <div class="flex flex-col items-center text-center shrink-0 mt-[50px]">
+                <p class="text-[34px] font-bold text-mal-tangerine leading-snug mb-1">
+                    좋은 후기만을 기대하지 않습니다.
+                </p>
+                <p class="text-[34px] font-bold text-mal-ivory leading-snug">
+                    직접 이용하며 느낀 점을 자유롭게 남겨주세요.
+                </p>
+            </div>
+            
+            <!-- ONE-LINE LEGAL TEXT (FIXED TRUNCATION) -->
+            <div class="mt-[24px] pt-5 border-t-[3px] border-mal-forest/50 w-[112%] -ml-[6%] shrink-0 text-center">
+                <p class="text-[22px] text-mal-ivory/50 font-medium whitespace-nowrap tracking-[-1.2px]">
+                    * 작성된 후기 중 일부는 작성자의 별도 동의가 있는 경우에 한해 말랑 홍보 콘텐츠에 소개될 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

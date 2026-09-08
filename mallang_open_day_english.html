@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, user-scalable=yes">
+    <title>MALLANG OPEN DAY Carousel (English)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Noto+Sans+KR:wght@300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mal-forest': '#1A3626',
+                        'mal-ivory': '#F7F5F0',
+                        'mal-tangerine': '#E86A33',
+                        'mal-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'sans': ['"Noto Sans KR"', 'sans-serif'],
+                        'serif': ['"Bodoni Moda"', 'serif'],
+                        'display': ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            word-break: keep-all;
+            overflow-wrap: normal;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .slide-container {
+            width: 1080px;
+            height: 1350px;
+            overflow: hidden;
+            position: relative;
+            background-color: #F7F5F0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .safe-padding {
+            padding: 75px 70px 90px 70px; 
+        }
+
+        .text-stroke-light {
+            -webkit-text-stroke: 2px rgba(247, 245, 240, 0.95); 
+            paint-order: stroke fill;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        @media print {
+            @page { size: 1080px 1350px; margin: 0; }
+            body { background-color: #ffffff; gap: 0 !important; padding: 0 !important; margin: 0 !important; }
+            .slide-container { box-shadow: none !important; page-break-after: always; page-break-inside: avoid; margin: 0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: Campaign Hero -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding justify-between">
+        <div class="absolute inset-0 z-0">
+            <img src="학원 내부 사진(입구 앞쪽).jpg" alt="Mallang Space" class="w-full h-full object-cover object-center opacity-40 mix-blend-multiply grayscale-[20%]">
+            <div class="absolute inset-0 bg-gradient-to-b from-mal-forest/90 via-mal-forest/70 to-mal-forest/95"></div>
+        </div>
+        <div class="z-10 mt-4 shrink-0">
+            <!-- Adjusted layout slightly to fit 4 lines without overflow -->
+            <h1 class="text-[88px] font-black leading-[1.05] tracking-tight text-mal-ivory drop-shadow-2xl shadow-black">
+                NEED A PLACE<br>
+                TO SPEND<br>
+                SOME TIME<br>
+                <span class="text-mal-tangerine">IN SAMSAN?</span>
+            </h1>
+        </div>
+        <div class="z-10 flex flex-col gap-[35px] mb-2 shrink-0 mt-auto">
+            <div class="border-l-[10px] border-mal-tangerine pl-[30px]">
+                <p class="text-[52px] font-black leading-tight tracking-tight text-white drop-shadow-lg shadow-black/60">
+                    STAY AS LONG AS YOU NEED.
+                </p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="font-serif text-[56px] leading-none tracking-tighter uppercase font-black text-white/95">
+                    MALLANG OPEN DAY
+                </p>
+                <p class="text-[30px] font-bold text-white/80 mt-1">
+                    Every Thursday & Saturday, our doors are a little more open.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: Moments in Samsan -->
+    <div class="slide-container bg-mal-ivory relative">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="학원 내부 사진(앞쪽 창가).jpg" alt="Mallang Space Window View" class="w-full h-full object-cover object-center opacity-[0.16] mix-blend-multiply">
+        </div>
+        <div class="relative z-10 w-full h-full safe-padding flex flex-col">
+            <header class="border-b-[5px] border-mal-forest pb-4 mb-12 inline-block self-start shrink-0">
+                <h2 class="text-[54px] font-black leading-[1.15] tracking-tight text-mal-forest">
+                    WHEN YOU NEED<br>SOMEWHERE TO STAY A WHILE,
+                </h2>
+                <p class="text-[40px] font-bold text-mal-tangerine mt-2">Think of Mallang.</p>
+            </header>
+            
+            <div class="relative flex-grow w-full mt-4">
+                <div class="absolute top-0 left-0 flex flex-col items-start w-[500px]">
+                    <p class="text-[24px] font-bold text-mal-charcoal/80 mb-[-6px] z-10 text-stroke-light leading-tight">Need somewhere quiet to study or work</p>
+                    <p class="text-[60px] font-black tracking-tight text-mal-forest text-stroke-light">STUDENTS</p>
+                </div>
+                
+                <div class="absolute top-[180px] right-0 flex flex-col items-end text-right w-[480px]">
+                    <p class="text-[24px] font-bold text-mal-charcoal/90 mb-[-6px] z-10 text-stroke-light leading-tight">Have some time between meetings</p>
+                    <p class="text-[52px] font-black tracking-tight text-mal-forest text-stroke-light">OFFICE WORKERS</p>
+                </div>
+                
+                <div class="absolute top-[410px] left-[50%] transform -translate-x-1/2 flex flex-col items-center text-center w-[120%]">
+                    <p class="text-[28px] font-bold text-mal-charcoal/90 mb-[-12px] z-10 text-stroke-light">With some time to spare between plans</p>
+                    <p class="text-[135px] font-black tracking-tighter text-mal-tangerine text-stroke-light drop-shadow-sm">ANYONE</p>
+                </div>
+                
+                <div class="absolute bottom-[130px] left-0 flex flex-col items-start w-[450px]">
+                    <p class="text-[24px] font-bold text-mal-charcoal/90 mb-[-6px] z-10 text-stroke-light leading-tight">Waiting to pick up your child</p>
+                    <p class="text-[60px] font-black tracking-tight text-mal-forest text-stroke-light">PARENTS</p>
+                </div>
+                
+                <div class="absolute bottom-[10px] right-0 flex flex-col items-end text-right w-[500px]">
+                    <p class="text-[24px] font-bold text-mal-charcoal/90 mb-[16px] z-10 text-stroke-light leading-tight">Need somewhere to rest, work, or study</p>
+                    <!-- Adjusted size and line-height for INTERNATIONAL RESIDENTS -->
+                    <p class="text-[50px] font-black tracking-tight text-mal-forest text-stroke-light leading-[1.1]">INTERNATIONAL<br>RESIDENTS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: A Little Hospitality -->
+    <div class="slide-container bg-mal-ivory safe-padding flex flex-col">
+        <header class="w-full shrink-0 mb-8 inline-block self-start">
+            <h2 class="font-serif text-[85px] uppercase tracking-tighter text-mal-tangerine font-black leading-[1.0] border-b-[5px] border-mal-tangerine pb-3 inline-block">
+                A LITTLE<br>HOSPITALITY.
+            </h2>
+        </header>
+
+        <div class="w-full h-[400px] shrink-0 relative z-10 overflow-hidden border-[4px] border-mal-forest/10 mb-10 shadow-sm">
+            <img src="학원 내부 사진(뒤쪽 다른 각도).jpg" alt="Mallang Hospitality Space" class="w-full h-full object-cover object-center">
+        </div>
+
+        <div class="w-full grid grid-cols-2 gap-y-12 gap-x-6 px-4 mb-auto shrink-0">
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">COFFEE</p>
+                <p class="text-[30px] font-bold text-mal-charcoal/80 leading-none">1–2 drinks</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">SNACKS</p>
+                <p class="text-[30px] font-bold text-mal-charcoal/80 leading-none">Simple snacks</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">WI-FI</p>
+                <p class="text-[30px] font-bold text-mal-charcoal/80 leading-none">Fast Wi-Fi</p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <p class="font-serif text-[48px] text-mal-charcoal uppercase tracking-wide leading-none font-black mb-2">A SEAT</p>
+                <p class="text-[30px] font-bold text-mal-charcoal/80 leading-none">A comfortable place to sit</p>
+            </div>
+        </div>
+        
+        <div class="w-full flex flex-col items-center text-center mt-10 shrink-0">
+            <h3 class="text-[46px] font-black leading-[1.15] tracking-tight text-mal-forest mb-5">
+                JUST COME BY.<br>
+                A LITTLE HOSPITALITY IS ON US.
+            </h3>
+            <div class="border-t-[3px] border-mal-forest/20 pt-4 w-full">
+                <p class="text-[30px] font-bold text-mal-charcoal/80 leading-tight">
+                    A small welcome for everyone who visits Mallang.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: No Sales Pressure -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding flex flex-col">
+        <div class="shrink-0 mb-[35px]">
+            <h2 class="font-display text-[145px] leading-[0.88] tracking-tighter uppercase font-black text-mal-tangerine">
+                NO<br>SALES<br>PRESSURE.
+            </h2>
+        </div>
+        <div class="shrink-0 mb-[45px]">
+            <p class="text-[52px] font-bold tracking-tight text-mal-ivory border-l-[10px] border-mal-tangerine pl-5 leading-snug">
+                YOU’RE WELCOME<br>TO JUST USE THE SPACE.
+            </p>
+        </div>
+        <div class="flex flex-col gap-[34px] pl-[30px] shrink-0">
+            <div class="flex flex-col">
+                <p class="font-serif text-[34px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-2">NO SALES TALK.</p>
+                <p class="text-[32px] font-medium text-mal-ivory/95 leading-none tracking-tight">We won’t approach you with a sales pitch.</p>
+            </div>
+            <div class="flex flex-col">
+                <p class="font-serif text-[34px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-2">NO PRESSURE.</p>
+                <p class="text-[32px] font-medium text-mal-ivory/95 leading-none tracking-tight">No pressure to sign up for anything.</p>
+            </div>
+            <div class="flex flex-col">
+                <p class="font-serif text-[34px] font-bold text-mal-tangerine uppercase tracking-widest leading-none mb-2">NO CONTACT REQUIRED.</p>
+                <p class="text-[32px] font-medium text-mal-ivory/95 leading-none tracking-tight">You don’t need to leave your contact details.</p>
+            </div>
+        </div>
+        <div class="mt-auto shrink-0 border-t-[3px] border-mal-tangerine pt-6 w-full">
+            <p class="text-[40px] font-bold text-mal-ivory leading-snug tracking-tight">
+                IF YOU GET CURIOUS<br>ABOUT MALLANG, JUST ASK.
+            </p>
+        </div>
+    </div>
+
+    <!-- PAGE 5: How To Visit -->
+    <div class="slide-container bg-mal-ivory relative overflow-hidden flex flex-col justify-center items-center safe-padding">
+        <div class="absolute inset-0 z-0 opacity-[0.12] grayscale mix-blend-multiply">
+            <img src="학원 내부 사진(뒤쪽).jpg" alt="Mallang Space" class="w-full h-full object-cover object-center">
+        </div>
+
+        <div class="z-10 flex flex-col items-center justify-center w-full relative h-full">
+            <p class="text-[45px] font-bold text-mal-charcoal mb-[35px] shrink-0">JUST COME IN AND SAY,</p>
+            
+            <div class="bg-mal-tangerine w-[120%] -ml-[10%] transform -rotate-[2.5deg] py-[55px] flex flex-col items-center justify-center shadow-sm shrink-0 mb-[35px]">
+                <p class="font-black text-mal-ivory text-[130px] leading-[1.1] tracking-tight">I’M HERE</p>
+                <p class="font-black text-mal-ivory text-[130px] leading-[1.1] tracking-tight">FOR</p>
+                <p class="font-black text-mal-ivory text-[130px] leading-[1.1] tracking-tight drop-shadow-sm">OPEN DAY.</p>
+            </div>
+            
+            <p class="text-[42px] font-bold text-mal-charcoal shrink-0">THAT’S ALL YOU NEED TO SAY.</p>
+        </div>
+    </div>
+
+    <!-- PAGE 6: TIME / LOCATION / PARKING -->
+    <div class="slide-container bg-mal-ivory text-mal-charcoal safe-padding flex flex-col justify-center">
+        <div class="w-full flex flex-col mt-[15px]">
+            
+            <!-- 1. Header & OPEN HOURS -->
+            <div class="flex justify-between items-end w-full shrink-0 border-b-[5px] border-mal-forest pb-3">
+                <div class="flex flex-col">
+                    <h2 class="text-[86px] font-black leading-none tracking-tight text-mal-forest uppercase">FIND US.</h2>
+                    <p class="text-[22px] font-bold text-mal-tangerine mt-1 tracking-wider uppercase">INSTAGRAM · @mallang_lingo</p>
+                </div>
+                
+                <div class="flex flex-col items-end mb-1">
+                    <p class="font-serif text-[24px] font-bold text-mal-charcoal/50 mb-2 tracking-wide uppercase">OPEN HOURS</p>
+                    <div class="grid grid-cols-[150px_auto] gap-x-[18px] gap-y-2 items-baseline text-left">
+                        <p class="text-[28px] font-black text-mal-tangerine leading-none text-right uppercase">Thursday</p>
+                        <p class="text-[34px] font-black text-mal-charcoal leading-none tracking-tight">10:00 AM – 10:00 PM</p>
+                        
+                        <p class="text-[28px] font-black text-mal-tangerine leading-none text-right uppercase">Saturday</p>
+                        <p class="text-[34px] font-black text-mal-charcoal leading-none tracking-tight">10:00 AM – 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. LOCATION / PARKING Split Image Grid -->
+            <div class="flex w-full gap-5 mt-[40px] h-[520px] shrink-0">
+                <!-- MAP -->
+                <div class="w-[58%] h-full bg-white border-[3px] border-mal-charcoal/10 flex items-center justify-center p-2">
+                    <img src="말랑링고 지도.jpg" alt="Map Location" class="w-full h-full object-contain">
+                </div>
+                <!-- PARKING -->
+                <div class="w-[42%] h-full border-[3px] border-mal-charcoal/10 overflow-hidden">
+                    <img src="주차장 전경.jpg" alt="Parking Lot" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
+            <!-- 3. LOCATION / PARKING Info Text -->
+            <div class="flex w-full gap-5 mt-[25px] shrink-0">
+                <!-- ADDRESS -->
+                <div class="w-[58%] flex flex-col px-1">
+                    <p class="font-serif text-[22px] font-bold text-mal-charcoal/50 mb-1 tracking-wide uppercase">LOCATION</p>
+                    <p class="text-[32px] font-black text-mal-charcoal leading-tight tracking-tight pr-4">2F, 36 Samsanjung-ro,<br>Nam-gu, Ulsan</p>
+                </div>
+                <!-- PARKING INFO -->
+                <div class="w-[42%] flex flex-col px-1">
+                    <p class="font-serif text-[22px] font-bold text-mal-charcoal/50 mb-1 tracking-wide uppercase">PARKING</p>
+                    <p class="text-[30px] font-bold text-mal-charcoal leading-tight tracking-tight">Free parking<br>behind the building<br>Approx. 40 spaces</p>
+                </div>
+            </div>
+
+            <!-- 4. Community Statement -->
+            <div class="flex flex-col mt-[40px] pt-[25px] border-t-[2px] border-mal-tangerine shrink-0 w-full mb-2">
+                <p class="text-[34px] font-bold text-mal-forest leading-tight mb-[8px] uppercase tracking-tight">
+                    We share our space with the community.
+                </p>
+                <p class="text-[26px] font-medium text-mal-charcoal/80 leading-snug tracking-tight break-keep">
+                    We hope to make our neighborhood a little more welcoming and connected.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: Share The Day -->
+    <div class="slide-container bg-mal-forest text-mal-ivory safe-padding flex flex-col items-center justify-center">
+        <div class="w-full flex flex-col items-center mt-[20px]">
+            
+            <!-- Header -->
+            <div class="border-b-[5px] border-mal-tangerine pb-4 w-full shrink-0">
+                <h2 class="font-serif text-[80px] uppercase tracking-tighter text-mal-tangerine font-black leading-none text-center">
+                    SHARE THE DAY.
+                </h2>
+            </div>
+
+            <!-- WRITE / OR / SHARE -->
+            <div class="flex items-start justify-between w-full shrink-0 relative mt-[45px]">
+                <div class="flex flex-col w-[45%] items-start text-left">
+                    <p class="font-serif text-[42px] font-bold text-mal-tangerine leading-none mb-3 tracking-wide">01 WRITE</p>
+                    <p class="text-[30px] font-bold leading-snug tracking-tight">Write about your<br>OPEN DAY experience</p>
+                </div>
+                
+                <div class="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2 font-serif text-[34px] italic text-mal-ivory/50 font-bold">
+                    OR
+                </div>
+                
+                <div class="flex flex-col w-[45%] items-end text-right">
+                    <p class="font-serif text-[42px] font-bold text-mal-tangerine leading-none mb-3 tracking-wide">02 SHARE</p>
+                    <p class="text-[30px] font-bold leading-snug tracking-tight">Share or repost<br>our OPEN DAY post</p>
+                </div>
+            </div>
+
+            <!-- Flow connection -->
+            <p class="text-[36px] font-bold text-mal-ivory text-center shrink-0 w-full mt-[45px]">
+                Take a screenshot or copy the link
+            </p>
+
+            <!-- Instagram DM CTA - Gap adjusted -->
+            <div class="flex flex-col items-center shrink-0 mt-[15px]">
+                <p class="text-[100px] font-black tracking-tight text-mal-tangerine leading-none drop-shadow-sm">Instagram DM</p>
+                <p class="text-[36px] font-bold text-mal-ivory mt-[26px] mb-[20px] opacity-90 tracking-wide">@mallang_lingo</p>
+                <p class="text-[48px] font-bold text-mal-ivory leading-none">SEND IT TO US.</p>
+            </div>
+            
+            <!-- Reward -->
+            <div class="bg-mal-ivory py-4 px-10 shrink-0 text-center mt-[45px] rounded-full">
+                <p class="text-[32px] font-bold text-mal-charcoal leading-snug tracking-tight">
+                    A few participants will be selected<br>to receive a small gift.
+                </p>
+            </div>
+
+            <!-- Review Message - Copy updated -->
+            <div class="flex flex-col items-center text-center shrink-0 mt-[45px]">
+                <p class="text-[32px] font-bold text-mal-tangerine leading-snug mb-1 tracking-tight">
+                    Your review doesn’t have to be positive.
+                </p>
+                <p class="text-[32px] font-bold text-mal-ivory leading-snug tracking-tight">
+                    Just share your honest experience.
+                </p>
+            </div>
+            
+            <!-- ONE-LINE LEGAL TEXT -->
+            <div class="mt-[30px] pt-4 border-t-[3px] border-mal-forest/50 w-full shrink-0 text-center">
+                <p class="text-[22px] text-mal-ivory/60 font-medium whitespace-nowrap tracking-tight">
+                    * Reviews are only shared by Mallang with the writer’s permission.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
